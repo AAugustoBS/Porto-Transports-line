@@ -13,11 +13,15 @@ using namespace std;
 
 class Graph {
     struct Edge {
+
+        string lineName;
         int dest;   // Destination node
         int weight; // An integer weight
     };
 
     struct Node {
+
+        string stopName;
         list<Edge> adj; // The list of outgoing edges (to adjacent nodes)
         bool visited;   // As the node been visited on a search?
     };
