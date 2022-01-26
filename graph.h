@@ -1,56 +1,60 @@
-// AED 2021/2022 - Aula Pratica 09
-// Pedro Ribeiro (DCC/FCUP) [03/01/2022]
+// AED 2021/2022 - Aula Pratica 11
+// Pedro Ribeiro (DCC/FCUP) [17/01/2022]
 
-#ifndef _GRAPH_H_
-#define _GRAPH_H_
+#ifndef GRAPH_H
+#define GRAPH_H
 
+//#include "minHeap.h"
 #include <vector>
 #include <list>
-#include <queue>
 #include <iostream>
 
 using namespace std;
 
 class Graph {
     struct Edge {
-
-        string lineName;
         int dest;   // Destination node
-        int weight; // An integer weight
+        float weight; // An integer weight(km's distance)
+        string line; //
     };
 
     struct Node {
-
-        string stopName;
         list<Edge> adj; // The list of outgoing edges (to adjacent nodes)
-        bool visited;   // As the node been visited on a search?
+        int dist;
+        int pred;
+        bool visited;
+
+        string codeName;
+        string adress;
+        string zone;
+        double lat,log;
     };
 
     int n;              // Graph size (vertices are numbered from 1 to n)
     bool hasDir;        // false: undirect; true: directed
     vector<Node> nodes; // The list of nodes being represented
 
+    void dijkstra(int s);
+
 public:
     // Constructor: nr nodes and direction (default: undirected)
     Graph(int nodes, bool dir = false);
 
     // Add edge from source to destination with a certain weight
-    void addEdge(int src, int dest, int weight = 1);
+    void addEdge(int src, int dest, float weight,string name);
 
-    // Depth-First Search: example implementation
-    void dfs(int v);
+    void setInfoNode(int idNode,vector<string>info);
 
-    // Breadth-First Search: example implementation
-    void bfs(int v);
+    void setInfoLine(int src,int dest,string lineName);
+    void showNodes();
 
     // ----- Functions to implement in this class -----
-    int outDegree(int v);
-    int connectedComponents();
-    int giantComponent();
-    list<int> topologicalSorting();
+    int dijkstra_distance(int a, int b);
+    list<int> dijkstra_path(int a, int b);
+    void bfs(int v);
+
     int distance(int a, int b);
-    int diameter();
-    bool hasCycle();
+
 };
 
 #endif
