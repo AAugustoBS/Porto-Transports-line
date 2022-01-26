@@ -11,13 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" name="Changes" comment="Graphs created">
+    <list default="true" id="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" name="Changes" comment="bfs implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/AED_PROJECT.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AED_PROJECT.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <list id="a67e4be7-451b-4f5c-9727-0b9ae362ba5b" name="Changes by hreis" comment="">
@@ -82,7 +77,7 @@
       <workItem from="1643124494382" duration="26475000" />
       <workItem from="1643223265016" duration="1810000" />
       <workItem from="1643230332309" duration="42000" />
-      <workItem from="1643230383262" duration="1286000" />
+      <workItem from="1643230383262" duration="2510000" />
     </task>
     <task id="LOCAL-00001" summary="Graphs">
       <created>1642880694589</created>
@@ -112,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643200422844</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bfs implemented">
+      <created>1643231874936</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643231874937</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +136,7 @@
     <MESSAGE value="Graphs" />
     <MESSAGE value="name of stops and lines" />
     <MESSAGE value="Graphs created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Graphs created" />
+    <MESSAGE value="bfs implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="bfs implemented" />
   </component>
 </project>
