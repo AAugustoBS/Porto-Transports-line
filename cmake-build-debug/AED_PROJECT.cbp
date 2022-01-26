@@ -80,10 +80,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h">
+			<Option target="AED_PROJECT"/>
+		</Unit>
 		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/ReadFiles.cpp">
 			<Option target="AED_PROJECT"/>
 		</Unit>
 		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/ReadFiles.h">
+			<Option target="AED_PROJECT"/>
+		</Unit>
+		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.cpp">
+			<Option target="AED_PROJECT"/>
+		</Unit>
+		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h">
 			<Option target="AED_PROJECT"/>
 		</Unit>
 		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/main.cpp">

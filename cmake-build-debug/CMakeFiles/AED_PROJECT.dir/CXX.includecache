@@ -6,11 +6,27 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/main.cpp
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
 iostream
 -
-fstream
+cmath
 -
-string
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.cpp
+graph.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
+climits
+-
+iostream
+-
+AuxFunctions.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
+vector
+-
+list
+-
+iostream
 -
 

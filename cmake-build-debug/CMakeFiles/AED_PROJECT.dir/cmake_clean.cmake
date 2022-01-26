@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "AED_PROJECT.exe.manifest"
   "AED_PROJECT.pdb"
   "CMakeFiles/AED_PROJECT.dir/ReadFiles.cpp.obj"
+  "CMakeFiles/AED_PROJECT.dir/graph.cpp.obj"
   "CMakeFiles/AED_PROJECT.dir/main.cpp.obj"
   "libAED_PROJECT.dll.a"
 )

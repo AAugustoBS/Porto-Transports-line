@@ -152,6 +152,30 @@ ReadFiles.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_PROJECT.dir\build.make CMakeFiles/AED_PROJECT.dir/ReadFiles.cpp.s
 .PHONY : ReadFiles.cpp.s
 
+graph.obj: graph.cpp.obj
+.PHONY : graph.obj
+
+# target to build an object file
+graph.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_PROJECT.dir\build.make CMakeFiles/AED_PROJECT.dir/graph.cpp.obj
+.PHONY : graph.cpp.obj
+
+graph.i: graph.cpp.i
+.PHONY : graph.i
+
+# target to preprocess a source file
+graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_PROJECT.dir\build.make CMakeFiles/AED_PROJECT.dir/graph.cpp.i
+.PHONY : graph.cpp.i
+
+graph.s: graph.cpp.s
+.PHONY : graph.s
+
+# target to generate assembly for a file
+graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_PROJECT.dir\build.make CMakeFiles/AED_PROJECT.dir/graph.cpp.s
+.PHONY : graph.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -188,6 +212,9 @@ help:
 	@echo ... ReadFiles.obj
 	@echo ... ReadFiles.i
 	@echo ... ReadFiles.s
+	@echo ... graph.obj
+	@echo ... graph.i
+	@echo ... graph.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
