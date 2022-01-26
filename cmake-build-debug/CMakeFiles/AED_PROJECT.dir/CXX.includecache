@@ -12,15 +12,15 @@ iostream
 cmath
 -
 
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.cpp
-graph.h
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
-climits
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/ReadFiles.h
+fstream
 -
-iostream
+string
 -
-AuxFunctions.h
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
+vector
+-
+queue
+-
 
 C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
 vector
@@ -29,4 +29,20 @@ list
 -
 iostream
 -
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+map
+-
+graph.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
+AuxFunctions.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
+ReadFiles.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/ReadFiles.h
 

@@ -15,9 +15,9 @@ int main() {
     map<string,int> mapStops;
 
     fillmapStops(mapStops,busLine);
-   //busLine.showNodes();
+  // busLine.showNodes();
     readEdge(busLine,mapStops);
-
+    cout<<busLine.distance(914,1441);
 }
 
 
