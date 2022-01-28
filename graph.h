@@ -36,7 +36,7 @@ class Graph {
     bool hasDir;        // false: undirect; true: directed
     vector<Node> nodes; // The list of nodes being represented
 
-    double distMax = 0.3;
+    double distMax = 0.2;
     void dijkstra(int s);
 
 public:
@@ -45,6 +45,8 @@ public:
 
     // Add edge from source to destination with a certain weight
     void addEdge(int src, int dest, float weight,string name);
+
+    void showNodeById(int idStop);
 
     void setInfoNode(int idNode,vector<string>info);
 

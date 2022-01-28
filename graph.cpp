@@ -25,12 +25,6 @@ void Graph::setInfoNode(int idNode,vector<string>info) {
         nodes[idNode].log = stod(info[4]);
 }
 
-void Graph::showNodes() {
-
-    for(auto v: nodes){
-        cout<<v.codeName<<" "<<v.adress<<endl;
-    }
-}
 
 void Graph::setInfoLine(int src, int dest, string lineName) {
     float distance = haversineFormula(nodes[src].lat,nodes[src].log,nodes[dest].lat,nodes[dest].log);
@@ -143,6 +137,7 @@ bool Graph::sortBySecond(const pair<Node, double> &a, const pair<Node, double> &
     return (a.second < b.second);
 }
 
+
 vector<pair<string, double>> Graph:: distancePersonStop(double lat, double log) {
 
    pair<string ,double> pairaux ;
@@ -169,3 +164,10 @@ vector<pair<string, double>> Graph:: distancePersonStop(double lat, double log) 
 void Graph::setDistanceMax(double distance) {
     this->distMax = distance;
 }
+
+void Graph::showNodeById(int idStop){
+   // cout<<idStop<<endl;
+    cout<<nodes[idStop].codeName;
+
+}
+

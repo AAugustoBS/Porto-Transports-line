@@ -4,6 +4,7 @@
 CMakeFiles/AED_PROJECT.dir/Application.cpp.obj: \
  ../Application.cpp \
  ../Application.h \
+ ../AuxFunctions.h \
  ../graph.h
 CMakeFiles/AED_PROJECT.dir/ReadFiles.cpp.obj: \
  ReadFiles.cpp \

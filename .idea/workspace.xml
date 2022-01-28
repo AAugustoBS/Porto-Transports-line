@@ -11,34 +11,24 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" name="Changes" comment="cersion">
-      <change afterPath="$PROJECT_DIR$/Application.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application.h" afterDir="false" />
+    <list default="true" id="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" name="Changes" comment="Main menu created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadFiles.h" beforeDir="false" afterPath="$PROJECT_DIR$/ReadFiles.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/AED_PROJECT.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AED_PROJECT.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Application.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application.h" beforeDir="false" afterPath="$PROJECT_DIR$/Application.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuxFunctions.h" beforeDir="false" afterPath="$PROJECT_DIR$/AuxFunctions.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AED_PROJECT.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AED_PROJECT.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/graph.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/graph.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <list id="f4f11ea9-48d2-4359-9b87-f14d2a2fe6ab" name="Changes by hreis" comment="">
+      <change beforePath="$PROJECT_DIR$/Application.h" beforeDir="false" afterPath="$PROJECT_DIR$/Application.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph.cpp" afterDir="false" />
     </list>
     <list id="c3b19eb5-f6ad-4ccf-baea-0811c6155ed1" name="Changes by luispaiva" comment="">
@@ -69,51 +59,27 @@
     <setting file="file://$PROJECT_DIR$/ReadFiles.h" root0="SKIP_INSPECTION" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/main.cpp">
-      <ranges>
-        <range start1="6" end1="7" start2="6" end2="7" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="11" end1="12" start2="11" end2="12" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="16" end1="17" start2="16" end2="16" changelist="c3b19eb5-f6ad-4ccf-baea-0811c6155ed1" />
-        <range start1="18" end1="19" start2="17" end2="24" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="20" end1="20" start2="25" end2="32" changelist="c3b19eb5-f6ad-4ccf-baea-0811c6155ed1" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/graph.cpp">
       <ranges>
         <range start1="3" end1="4" start2="3" end2="4" changelist="f4f11ea9-48d2-4359-9b87-f14d2a2fe6ab" />
-        <range start1="5" end1="5" start2="5" end2="8" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="36" end1="37" start2="39" end2="40" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="38" end1="40" start2="41" end2="47" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="41" end1="46" start2="48" end2="54" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="47" end1="50" start2="55" end2="60" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="51" end1="63" start2="61" end2="66" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="64" end1="70" start2="67" end2="68" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="71" end1="76" start2="69" end2="71" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="77" end1="96" start2="72" end2="79" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="97" end1="99" start2="80" end2="83" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="104" end1="104" start2="88" end2="89" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="105" end1="113" start2="90" end2="94" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="114" end1="123" start2="95" end2="99" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="124" end1="170" start2="100" end2="100" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="181" end1="182" start2="111" end2="112" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="196" end1="197" start2="126" end2="127" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="200" end1="200" start2="130" end2="172" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
+        <range start1="27" end1="33" start2="27" end2="27" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
+        <range start1="144" end1="144" start2="138" end2="139" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
+        <range start1="172" end1="172" start2="167" end2="174" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/graph.h">
       <ranges>
-        <range start1="16" end1="17" start2="16" end2="17" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="20" end1="20" start2="20" end2="21" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="22" end1="23" start2="23" end2="24" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="29" end1="29" start2="30" end2="31" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="36" end1="36" start2="38" end2="39" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="37" end1="37" start2="40" end2="41" changelist="c3b19eb5-f6ad-4ccf-baea-0811c6155ed1" />
-        <range start1="47" end1="47" start2="51" end2="53" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="50" end1="50" start2="56" end2="58" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="51" end1="52" start2="59" end2="60" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="55" end1="55" start2="63" end2="67" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
-        <range start1="56" end1="56" start2="68" end2="70" changelist="c3b19eb5-f6ad-4ccf-baea-0811c6155ed1" />
-        <range start1="57" end1="57" start2="71" end2="75" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
+        <range start1="38" end1="39" start2="38" end2="39" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
+        <range start1="40" end1="40" start2="40" end2="41" changelist="c3b19eb5-f6ad-4ccf-baea-0811c6155ed1" />
+        <range start1="48" end1="48" start2="49" end2="51" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
+        <range start1="71" end1="71" start2="74" end2="76" changelist="c3b19eb5-f6ad-4ccf-baea-0811c6155ed1" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Application.h">
+      <ranges>
+        <range start1="11" end1="11" start2="11" end2="12" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
+        <range start1="31" end1="31" start2="32" end2="49" changelist="7e6559fe-36ff-41d1-bbe6-b28c84e869b7" />
+        <range start1="36" end1="37" start2="54" end2="54" changelist="f4f11ea9-48d2-4359-9b87-f14d2a2fe6ab" />
       </ranges>
     </file>
   </component>
@@ -135,11 +101,6 @@
   </component>
   <component name="RunManager">
     <configuration name="AED_PROJECT" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AED_PROJECT" TARGET_NAME="AED_PROJECT" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AED_PROJECT" RUN_TARGET_NAME="AED_PROJECT">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -170,7 +131,8 @@
       <workItem from="1643305323437" duration="100000" />
       <workItem from="1643306043977" duration="125000" />
       <workItem from="1643306286095" duration="6817000" />
-      <workItem from="1643327233700" duration="8445000" />
+      <workItem from="1643327233700" duration="9257000" />
+      <workItem from="1643360378190" duration="20236000" />
     </task>
     <task id="LOCAL-00001" summary="Graphs">
       <created>1642880694589</created>
@@ -221,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643233406679</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Main menu created">
+      <created>1643336161713</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1643336161713</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +214,7 @@
     <MESSAGE value="Graphs created" />
     <MESSAGE value="bfs implemented" />
     <MESSAGE value="cersion" />
-    <option name="LAST_COMMIT_MESSAGE" value="cersion" />
+    <MESSAGE value="Main menu created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main menu created" />
   </component>
 </project>

@@ -19,6 +19,24 @@ string
 -
 map
 -
+AuxFunctions.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
+iostream
+-
+cmath
+-
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/ReadFiles.h
+fstream
+-
+string
+-
+vector
+-
+queue
+-
 
 C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
 vector
@@ -27,4 +45,20 @@ list
 -
 iostream
 -
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/main.cpp
+iostream
+-
+string
+-
+map
+-
+graph.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
+AuxFunctions.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
+ReadFiles.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/ReadFiles.h
+Application.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/Application.h
 

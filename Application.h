@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include "AuxFunctions.h"
 
 
 class Application {
@@ -29,6 +30,23 @@ public:
     void MinimumbyStop();
 
     void MinimumbyCoordenates();
+
+    void menuSearchRoute();
+
+    void lessStopMenu(int origChoose,int destChoose);
+
+    void filterBestWayByBFS(string codeStop,vector<pair <string ,double>> possivelStops,int choose);
+
+    void filterBestRouteByDij(vector<pair <string ,double>> possivelStopsOrig,vector<pair <string ,double>> possivelStopsDest);
+
+    void filterBesRoutesByBFS(vector<pair <string ,double>> possivelStopsOrig,vector<pair <string ,double>> possivelStopsDest);
+
+    void bestWayByDij(string codeStop,vector<pair <string ,double>> possivelStops,int choose);
+
+    void askCoordinates(double &lat,double &log);
+
+    void askStop(string &codeStop);
+
 private:
     bool stateApplication;
     Graph *busLine;
