@@ -1,7 +1,6 @@
 #include "graph.h"
 #include <climits>
 #include <iostream>
-#include<queue>
 #include "AuxFunctions.h"
 #include "MinHeap.h"
 #include <map>
@@ -102,35 +101,35 @@ void Graph::bfs(int v) {
     nodes[v].dist = 0;
     nodes[v]. visited = true;
     while (!q.empty()) { // while there are still unvisited nodes
-        int u = q.front(); q.pop();
-
+        int u = q.front();
+        q.pop();
         int count = 0;
-        for (auto e : nodes[u].adj) {
+        for (auto e: nodes[u].adj) {
             int w = e.dest;
             if (!nodes[w].visited) {
                 q.push(w);
                 nodes[w].visited = true;
-                nodes[w].dist = nodes[u].dist +1;
+                nodes[w].dist = nodes[u].dist + 1;
             }
         }
+
     }
-}
+    }
 
 int Graph::distance(int a, int b) {
     bfs(a);
-   // cout<<nodes[a].codeName<<" "<<nodes[b].codeName<<endl;
+    //cout<<nodes[a].codeName<<" "<<nodes[b].codeName<<endl;
     return nodes[b].dist;
 }
 
+void Graph::createtrajeto(queue <int> q){
 
+}
 
 void Graph::getEdge(int idStops) {
-
     for(auto i:nodes[idStops].adj){
         cout<<i.line<<endl;
     }
-
-
 }
 
 bool Graph::sortBySecond(const pair<Node, double> &a, const pair<Node, double> &b){
@@ -169,5 +168,16 @@ void Graph::showNodeById(int idStop){
    // cout<<idStop<<endl;
     cout<<nodes[idStop].codeName;
 
+}
+
+void Graph::setStoplines(int idStops) {
+    for(auto i:nodes[idStops].adj){
+        stoplines.push_back(i);
+    }
+
+}
+
+const vector<Graph::Edge> &Graph::getStoplines() {
+    return stoplines;
 }
 

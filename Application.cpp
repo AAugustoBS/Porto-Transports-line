@@ -1,6 +1,3 @@
-//
-// Created by Antonio Augusto on 27/01/2022.
-//
 
 #include "Application.h"
 
@@ -10,50 +7,46 @@ Application::Application(Graph *busLine,map<string,int> &mapStops){
     this->mapStops = mapStops;
 }
 
+void Application::printMenuOptions() {
+    cout<<"Welcome to Porto public transport System!\n\n";
+    cout<<"Select an option below: \n";
+    cout<<"1. Search route menu\n";
+    cout<<"2. Set distance\n";
+    cout<<"3. Minimum stops\n";
+    cout<<"0. Exit\n";
+}
+
 void Application::mainMenu() {
-    int nodes;
+    //int nodes;
     int choose;
     stateApplication = true;
     while(stateApplication){
         printMenuOptions();
         cin>>choose;
-         switch(choose){
-             case 1:
-                 //menu1();
-                 /*
-                  * Para efeitos de melhor compreensão: procurar melhor rota para o usuario com base em suas escolhas
-                  * (1) Com saida  de uma origem(codigo paragem, coordenadas)
-                  * (2) Com chegeda a um destino (codigo paragem,coordenadas)
-                  * (3) perguntar preferencia de rota(menos paragens, mais rapido,se der tempo fazer mais barato)
-                  */
+        switch(choose){
+            case 1:
+                //menu1();
+                /*
+                 * Para efeitos de melhor compreensão: procurar melhor rota para o usuario com base em suas escolhas
+                 * (1) Com saida  de uma origem(codigo paragem, coordenadas)
+                 * (2) Com chegeda a um destino (codigo paragem,coordenadas)
+                 * (3) perguntar preferencia de rota(menos paragens, mais rapido,se der tempo fazer mais barato)
+                 */
                 menuSearchRoute();
                 break;
 
-             case 2:
-                 menuSetDistance();
+            case 2:
+                menuSetDistance();
                 break;
 
-             case 3:
-                 menuTypeDestinationStop();
-                 break;
-             case 0:
-                 stateApplication = false;
-                 break;
-         }
+            case 3:
+                menuTypeDestinationStop();
+                break;
+            case 0:
+                stateApplication = false;
+                break;
+        }
     }
-}
-
-
-void Application::printMenuOptions() {
-
-    cout<<"Welcome to Porto public transport System!\n\n";
-    cout<<"Select an option below: \n";
-    cout<<"1. Search stops more close\n";
-    cout<<"2. Set distance\n";
-    cout<<"3. Minimum stops\n";
-    cout<<"0. Exit\n";
-
-
 }
 
 void Application::menu1(){
@@ -76,6 +69,7 @@ void Application::menuSetDistance() {
     cin >> distance;
     busLine->setDistanceMax(distance);
 }
+
  void Application::menuTypeDestinationStop(){
     cout<<"Select your destination"<<endl;
     cout<<"1. Paragem de destino"<<endl;
@@ -140,7 +134,6 @@ void Application::menuSearchRoute(){
         case 2:
             askStop(codeStopOrig);
 
-
     }
 
     //TRATANDO DO DESTINO
@@ -152,7 +145,7 @@ void Application::menuSearchRoute(){
             latDest = 41.167659;
             logDest = -8.689353;
             possivelStopsDest = busLine->distancePersonStop(latDest,logDest);
-            cout<<possivelStopsDest.size()<<endl;
+            //cout<<possivelStopsDest.size()<<endl;
             break;
 
         case 2:
@@ -205,6 +198,7 @@ void Application::menuSearchRoute(){
 
 void Application::bestWayByDij(string codeStop,vector<pair <string ,double>> possivelStops,int choose){
     pair<pair<string,string>,double> bestRoute;
+    cout<<"entrei"<<endl;
     bestRoute.first.first = codeStop;
     bestRoute.first.second = "";
     bestRoute.second = INT_MAX/2; //DISTANCIA EM KM
@@ -291,10 +285,11 @@ void Application::filterBestRouteByDij(vector<pair <string ,double>> possivelSto
     bestRoute.first.first = "";
     bestRoute.first.second = "";
     bestRoute.second = INT_MAX/2; //DISTANCIA EM KM
+    cout<<"entrei"<<endl;
 
     for(auto orig: possivelStopsOrig){
         for(auto dest: possivelStopsDest){
-            //cout<<orig.first.<<endl;
+            cout<<orig.first<<endl;
             double distance = busLine->dijkstra_distance(mapStops.find(orig.first)->second,mapStops.find(dest.first)->second);
             if(distance < bestRoute.second){
                 bestRoute.first.first = orig.first;

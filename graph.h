@@ -8,6 +8,7 @@
 #include <vector>
 #include <list>
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
@@ -36,8 +37,10 @@ class Graph {
     bool hasDir;        // false: undirect; true: directed
     vector<Node> nodes; // The list of nodes being represented
 
-    double distMax = 0.2;
+    double distMax = 0.3;
     void dijkstra(int s);
+    vector <Edge> stoplines={} ;
+    vector <int> trajeto={};
 
 public:
     // Constructor: nr nodes and direction (default: undirected)
@@ -53,13 +56,16 @@ public:
     void getPath(int src,int dest);
 
     void setInfoLine(int src,int dest,string lineName);
+
     void showNodes();
 
     void getEdge(int idStops);
 
     // ----- Functions to implement in this class -----
     double dijkstra_distance(int a, int b);
+
     list<int> dijkstra_path(int a, int b);
+
     void bfs(int v);
 
     void setDistanceMax(double distance );
@@ -68,8 +74,11 @@ public:
 
     int distance(int a, int b);
 
+    void setStoplines(int idStops);
 
+    const vector<Edge> &getStoplines();
 
+    void createtrajeto(queue<int> q);
 
     bool sortBySecond(const pair<Node, double> &a, const pair<Node, double> &b);
 };

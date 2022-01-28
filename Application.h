@@ -52,6 +52,8 @@ private:
     Graph *busLine;
     map<string,int> mapStops;
     vector<pair <string ,double>> possivelStops;
+    double latitude;
+    double longitude;
 
 };
 
