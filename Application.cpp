@@ -132,7 +132,9 @@ void Application::menuSearchRoute(){
     //TRATANDO DA ORIGEM
     switch(origChoose){
         case 1:
-            askCoordinates(latOrig,logOrig);
+            //askCoordinates(latOrig,logOrig);
+            latOrig = 41.181130;
+            logOrig = -8.595687;
             possivelStopsOrig = busLine->distancePersonStop(latOrig,logOrig);
             break;
         case 2:
@@ -146,7 +148,9 @@ void Application::menuSearchRoute(){
     cin>>destChoose;
     switch ((destChoose)) {
         case 1:
-            askCoordinates(latDest,logDest);
+            //askCoordinates(latDest,logDest);
+            latDest = 41.167659;
+            logDest = -8.689353;
             possivelStopsDest = busLine->distancePersonStop(latDest,logDest);
             cout<<possivelStopsDest.size()<<endl;
             break;
@@ -212,11 +216,26 @@ void Application::bestWayByDij(string codeStop,vector<pair <string ,double>> pos
                 bestRoute.second = distance;
             }
         }
-
+        cout<<"Go to ";
+        busLine->showNodeById(mapStops.find(bestRoute.first.first)->second);
+        cout<<" and wait for "<<bestRoute.second<<"km until ";
+        busLine->showNodeById(mapStops.find(bestRoute.first.second)->second);
+        return;
     }
 
     else if(choose == 2){
-
+        for(auto orig:possivelStops){
+            double distance = busLine->dijkstra_distance(mapStops.find(bestRoute.first.second)->second,mapStops.find(codeStop)->second);
+            if(distance<bestRoute.second){
+                bestRoute.first.second = orig.first;
+                bestRoute.second = distance;
+            }
+        }
+        cout<<"Go to ";
+        busLine->showNodeById(mapStops.find(bestRoute.first.first)->second);
+        cout<<" and wait for "<<bestRoute.second<<"km until ";
+        busLine->showNodeById(mapStops.find(bestRoute.first.second)->second);
+        return;
     }
 }
 
@@ -302,18 +321,22 @@ void Application::filterBesRoutesByBFS(vector<pair <string ,double>> possivelSto
     for(auto ori:possivelStopsOrig){
         for(auto dest: possivelStopsDest){
             int auxDistance = busLine->distance(mapStops.find(ori.first)->second,mapStops.find(dest.first)->second);
-            if(auxDistance< bestRoute.second){
+            //cout<<"aqui "<< mapStops.find(ori.first)->second<<" "<<mapStops.find(dest.first)->second<<"distance "<<auxDistance<<endl;
+            if(auxDistance< bestRoute.second&&  auxDistance != 0){
                 bestRoute.first.first = ori.first;
                 bestRoute.first.second = dest.first;
                 bestRoute.second = auxDistance;
+
+                //cout<<auxDistance<<endl;
             }
         }
     }
 
     cout<<"Go to ";
     busLine->showNodeById(mapStops.find(bestRoute.first.first)->second);
-    cout<<" and wait for "<<bestRoute.second<<" until ";
+    cout<<" and wait for "<<bestRoute.second<<" until "; // numero paragens
     busLine->showNodeById(mapStops.find(bestRoute.first.second)->second);
+    cout<<endl;
 }
 
 
