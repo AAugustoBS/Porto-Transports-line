@@ -3,6 +3,9 @@
 #include <iostream>
 #include<queue>
 #include "AuxFunctions.h"
+#include "MinHeap.h"
+#include <map>
+#include <algorithm>
 // Constructor: nr nodes and direction (default: undirected)
 Graph::Graph(int num, bool dir) : n(num), hasDir(dir), nodes(num+1) {
 }
@@ -34,140 +37,67 @@ void Graph::setInfoLine(int src, int dest, string lineName) {
     addEdge(src,dest,distance,lineName);
 }
 
-int Graph::dijkstra_distance(int a, int b) {
+void Graph::dijkstra(int s){
 
-    // vetor de distâncias
-    int dist[nodes.size()];
-
-    /*
-       vetor de visitados serve para caso o vértice já tenha sido
-       expandido (visitado), não expandir mais
-    */
-    int visitados[nodes.size()];
-
-    // fila de prioridades de pair (distancia, vértice)
-    priority_queue < pair<int, int>,
-    vector<pair<int, int> >, greater<pair<int, int> > > pq;
-
-    // inicia o vetor de distâncias e visitados
-    for(int i = 0; i < nodes.size(); i++)
-    {
-        dist[i] = 1000;
-        visitados[i] = false;
+    MinHeap<int,double>q(n,0);
+    for(int v = 1;v<=n;v++){
+        nodes[v].dist = INT_MAX/2;
+        q.insert(v,INT_MAX/2);
+        nodes[v].visited = false;
     }
 
-    // a distância de orig para orig é 0
-    dist[a] = 0;
+    nodes[s].dist = 0;
+    q.decreaseKey(s,0);
+    nodes[s].pred = s;
+    while(q.getSize()>0){
+        int u = q.removeMin();
+        nodes[u].visited = true;
 
-    // insere na fila
-    pq.push(make_pair(dist[a], a));
+        for(auto e:  nodes[u].adj){
+            double v = e.dest;
+            double w = e.weight;
+            if(!nodes[v].visited && nodes[u].dist + w < nodes[v].dist){
+                nodes[v].dist = nodes[u].dist + w;
 
-    // loop do algoritmo
-    while(!pq.empty())
-    {
-        pair<int, int> p = pq.top(); // extrai o pair do topo
-        int u = p.second; // obtém o vértice do pair
-        pq.pop(); // remove da fila
-
-        // verifica se o vértice não foi expandido
-        if(visitados[u] == false)
-        {
-            // marca como visitado
-            visitados[u] = true;
-
-            list<Edge>::iterator it;
-
-            // percorre os vértices "v" adjacentes de "u"
-            for(it = nodes[u].adj.begin();it != nodes[u].adj.end();it++){
-
-                // obtém o vértice adjacente e o custo da aresta
-                int v = it->dest;
-                int custo_aresta = it->weight;
-
-                // relaxamento (u, v)
-                if(dist[v] > (dist[u] + custo_aresta))
-                {
-                    // atualiza a distância de "v" e insere na fila
-                    dist[v] = dist[u] + custo_aresta;
-                    pq.push(make_pair(dist[v], v));
-                }
+                q.decreaseKey(v,nodes[v].dist);
+                nodes[v].pred = u;
             }
         }
     }
 
-    // retorna a distância mínima até o destino
-    return dist[b];
+}
+
+void Graph::getPath(int src,int dest) {
+    list<int> pa = dijkstra_path(src,dest);
+
+    list<int>::iterator it = pa.begin();
+    while(it !=pa.end()){
+        cout << nodes[*it].codeName << endl;
+       // cout<<nodes[*it].codeName<<endl;
+        advance(it,1);
+    }
+}
+
+double Graph::dijkstra_distance(int a, int b) {
+    dijkstra(a);
+    return nodes[b].dist;
 
 }
 
 
 list<int> Graph::dijkstra_path(int a, int b) {
+
     list<int> path;
-    // vetor de distâncias
-    int dist[nodes.size()];
+    dijkstra(a);
+    if(nodes[b].dist == INT_MAX/2)return path;
+    int v = b;
+    path.push_front(v);
 
-    /*
-       vetor de visitados serve para caso o vértice já tenha sido
-       expandido (visitado), não expandir mais
-    */
-    int visitados[nodes.size()];
-
-    // fila de prioridades de pair (distancia, vértice)
-    priority_queue < pair<int, int>,
-    vector<pair<int, int> >, greater<pair<int, int> > > pq;
-
-    // inicia o vetor de distâncias e visitados
-    for(int i = 0; i < nodes.size(); i++)
-    {
-        dist[i] = 1000;
-        visitados[i] = false;
+    while(v!= a){
+        //cout<<v<<endl;
+        v=nodes[v].pred;
+        path.push_front(v);
     }
-
-    // a distância de orig para orig é 0
-    dist[a] = 0;
-    path.push_back(a);
-    // insere na fila
-    pq.push(make_pair(dist[a], a));
-
-    // loop do algoritmo
-    while(!pq.empty())
-    {
-        pair<int, int> p = pq.top(); // extrai o pair do topo
-        int u = p.second; // obtém o vértice do pair
-        pq.pop(); // remove da fila
-
-        // verifica se o vértice não foi expandido
-        if(visitados[u] == false)
-        {
-            // marca como visitado
-            visitados[u] = true;
-
-            list<Edge>::iterator it;
-
-            // percorre os vértices "v" adjacentes de "u"
-            for(it = nodes[u].adj.begin();it != nodes[u].adj.end();it++){
-                /* for(it = adj[u].begin(); it != adj[u].end(); it++)
-                 {*/
-                // obtém o vértice adjacente e o custo da aresta
-                int v = it->dest;
-                int custo_aresta = it->weight;
-
-                // relaxamento (u, v)
-                if(dist[v] > (dist[u] + custo_aresta))
-                {
-                    // atualiza a distância de "v" e insere na fila
-
-                    dist[v] = dist[u] + custo_aresta;
-                    pq.push(make_pair(dist[v], v));
-                    path.push_back(u);
-                }
-
-            }
-
-        }
-    }
-    path.push_back(b);
-    // retorna a distância mínima até o destino
     return path;
 }
 
@@ -179,7 +109,7 @@ void Graph::bfs(int v) {
     nodes[v]. visited = true;
     while (!q.empty()) { // while there are still unvisited nodes
         int u = q.front(); q.pop();
-       // cout << u << " "; // show node order
+
         int count = 0;
         for (auto e : nodes[u].adj) {
             int w = e.dest;
@@ -194,6 +124,48 @@ void Graph::bfs(int v) {
 
 int Graph::distance(int a, int b) {
     bfs(a);
-    cout<<nodes[a].codeName<<" "<<nodes[b].codeName<<endl;
+   // cout<<nodes[a].codeName<<" "<<nodes[b].codeName<<endl;
     return nodes[b].dist;
+}
+
+
+
+void Graph::getEdge(int idStops) {
+
+    for(auto i:nodes[idStops].adj){
+        cout<<i.line<<endl;
+    }
+
+
+}
+
+bool Graph::sortBySecond(const pair<Node, double> &a, const pair<Node, double> &b){
+    return (a.second < b.second);
+}
+
+vector<pair<string, double>> Graph:: distancePersonStop(double lat, double log) {
+
+   pair<string ,double> pairaux ;
+   vector<pair<string, double>> paragensProx ;
+
+   //paragensProx.push_back(1);
+   //paragensProx.push_back(3);
+
+    for(auto i: nodes){
+        double dist=haversineFormula(lat,log,i.lat,i.log);
+        if(dist<=distMax){
+
+            pairaux.first=i.codeName;
+            pairaux.second=dist;
+            paragensProx.push_back(pairaux);
+        }
+    }
+
+    //sort(paragensProx.begin(), paragensProx.end());
+    return paragensProx;
+
+}
+
+void Graph::setDistanceMax(double distance) {
+    this->distMax = distance;
 }

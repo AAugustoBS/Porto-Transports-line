@@ -128,6 +128,30 @@ AED_PROJECT/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_PROJECT.dir\build.make CMakeFiles/AED_PROJECT.dir/build
 .PHONY : AED_PROJECT/fast
 
+Application.obj: Application.cpp.obj
+.PHONY : Application.obj
+
+# target to build an object file
+Application.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_PROJECT.dir\build.make CMakeFiles/AED_PROJECT.dir/Application.cpp.obj
+.PHONY : Application.cpp.obj
+
+Application.i: Application.cpp.i
+.PHONY : Application.i
+
+# target to preprocess a source file
+Application.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_PROJECT.dir\build.make CMakeFiles/AED_PROJECT.dir/Application.cpp.i
+.PHONY : Application.cpp.i
+
+Application.s: Application.cpp.s
+.PHONY : Application.s
+
+# target to generate assembly for a file
+Application.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_PROJECT.dir\build.make CMakeFiles/AED_PROJECT.dir/Application.cpp.s
+.PHONY : Application.cpp.s
+
 ReadFiles.obj: ReadFiles.cpp.obj
 .PHONY : ReadFiles.obj
 
@@ -209,6 +233,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... AED_PROJECT
+	@echo ... Application.obj
+	@echo ... Application.i
+	@echo ... Application.s
 	@echo ... ReadFiles.obj
 	@echo ... ReadFiles.i
 	@echo ... ReadFiles.s

@@ -80,7 +80,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/Application.cpp">
+			<Option target="AED_PROJECT"/>
+		</Unit>
+		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/Application.h">
+			<Option target="AED_PROJECT"/>
+		</Unit>
 		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h">
+			<Option target="AED_PROJECT"/>
+		</Unit>
+		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/MinHeap.h">
 			<Option target="AED_PROJECT"/>
 		</Unit>
 		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/ReadFiles.cpp">

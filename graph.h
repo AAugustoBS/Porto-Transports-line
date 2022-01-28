@@ -14,19 +14,21 @@ using namespace std;
 class Graph {
     struct Edge {
         int dest;   // Destination node
-        float weight; // An integer weight(km's distance)
+        double weight; // An integer weight(km's distance)
         string line; //
     };
 
+    //PARAGENS DE AUTOCARRO
     struct Node {
         list<Edge> adj; // The list of outgoing edges (to adjacent nodes)
-        int dist;
+        double dist;
         int pred;
         bool visited;
 
         string codeName;
         string adress;
         string zone;
+      //  Coordinates c1;
         double lat,log;
     };
 
@@ -34,6 +36,7 @@ class Graph {
     bool hasDir;        // false: undirect; true: directed
     vector<Node> nodes; // The list of nodes being represented
 
+    double distMax = 0.3;
     void dijkstra(int s);
 
 public:
@@ -45,16 +48,28 @@ public:
 
     void setInfoNode(int idNode,vector<string>info);
 
+    void getPath(int src,int dest);
+
     void setInfoLine(int src,int dest,string lineName);
     void showNodes();
 
+    void getEdge(int idStops);
+
     // ----- Functions to implement in this class -----
-    int dijkstra_distance(int a, int b);
+    double dijkstra_distance(int a, int b);
     list<int> dijkstra_path(int a, int b);
     void bfs(int v);
 
+    void setDistanceMax(double distance );
+
+    vector<pair<string, double>> distancePersonStop(double lat, double log);
+
     int distance(int a, int b);
 
+
+
+
+    bool sortBySecond(const pair<Node, double> &a, const pair<Node, double> &b);
 };
 
 #endif

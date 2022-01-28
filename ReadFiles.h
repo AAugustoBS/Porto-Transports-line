@@ -77,9 +77,12 @@ void readEdge(Graph &busline,map<string,int> mapStops){
 
     while(getline(file,line,',')){
         string fileToOpen = "dataset/line_" + line +"_0.csv";
+        string fileToOpen2 = "dataset/line_" + line +"_1.csv";
         //cout<<fileToOpen<<endl;
         getline(file,line);
         readLine(fileToOpen,line,busline,mapStops);
+
+        readLine(fileToOpen2,line,busline,mapStops);
     }
 
 }

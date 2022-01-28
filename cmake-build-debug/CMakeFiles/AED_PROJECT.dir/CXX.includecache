@@ -6,20 +6,18 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
-iostream
--
-cmath
--
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/Application.cpp
+Application.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/Application.h
 
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/ReadFiles.h
-fstream
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/Application.h
+graph.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
+iostream
 -
 string
 -
-vector
--
-queue
+map
 -
 
 C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
@@ -29,20 +27,4 @@ list
 -
 iostream
 -
-
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/main.cpp
-iostream
--
-fstream
--
-string
--
-map
--
-graph.h
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
-AuxFunctions.h
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
-ReadFiles.h
-C:/Users/Antonio Augusto/Documents/AED-PROJECT/ReadFiles.h
 
