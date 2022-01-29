@@ -103,7 +103,7 @@ void Graph::bfs(int v) {
     while (!q.empty()) { // while there are still unvisited nodes
         int u = q.front();
         q.pop();
-        int count = 0;
+
         for (auto e: nodes[u].adj) {
             int w = e.dest;
             if (!nodes[w].visited) {
@@ -112,7 +112,6 @@ void Graph::bfs(int v) {
                 nodes[w].dist = nodes[u].dist + 1;
             }
         }
-
     }
     }
 
@@ -182,3 +181,16 @@ const vector<Graph::Edge> &Graph::getStoplines() {
     return stoplines;
 }
 
+
+void Graph::stopNextStop(map<string,int> mapStops) {
+    double distanceBetweenStops;
+    int count;
+    for(auto stop1 : nodes){
+        for(auto stop2 : nodes){
+            distanceBetweenStops = haversineFormula(stop1.lat,stop1.log,stop2.lat,stop2.log);
+            if(distanceBetweenStops <= 0.220 && distanceBetweenStops != 0){
+                addEdge(mapStops.find(stop1.codeName)->second,mapStops.find(stop2.codeName)->second,distanceBetweenStops,"Walk");
+            }
+        }
+    }
+}

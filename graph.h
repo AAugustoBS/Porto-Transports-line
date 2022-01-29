@@ -9,6 +9,7 @@
 #include <list>
 #include <iostream>
 #include <queue>
+#include <map>
 
 using namespace std;
 
@@ -51,6 +52,8 @@ public:
 
     void showNodeById(int idStop);
 
+    void stopNextStop(map<string,int> mapStops);
+
     void setInfoNode(int idNode,vector<string>info);
 
     void getPath(int src,int dest);
@@ -61,7 +64,7 @@ public:
 
     void getEdge(int idStops);
 
-    // ----- Functions to implement in this class -----
+
     double dijkstra_distance(int a, int b);
 
     list<int> dijkstra_path(int a, int b);

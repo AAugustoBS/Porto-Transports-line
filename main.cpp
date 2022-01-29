@@ -16,7 +16,9 @@ int main() {
     map<string,int> mapStops;
     fillmapStops(mapStops,busLine);
     readEdge(busLine,mapStops);
-    cout<<setprecision(3);
+    busLine.stopNextStop(mapStops);
+
+
     //cout<<busLine.distance(235,626)<<endl;
 
     Application1 app1(&busLine,mapStops);

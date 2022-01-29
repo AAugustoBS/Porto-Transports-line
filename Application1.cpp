@@ -58,7 +58,7 @@ void Application1::setOriginCoordenates(){
 }
 
 void Application1::setOriginStop(){
-    originStop="ASP4";
+    originStop="ASP3";
     /*
     cout<<"Origin Stop: ";
     cin>>this->originStop;
@@ -111,7 +111,7 @@ void Application1::setDestCoordenates() {
 }
 
 void Application1::setDestStop(){
-    destStop="CQ8";
+    destStop="MLAR2";
     /*cout<<"Dest Stop: ";
     cin>>this->destStop;
     cout<<endl;*/

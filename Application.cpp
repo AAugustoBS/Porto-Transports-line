@@ -285,7 +285,6 @@ void Application::filterBestRouteByDij(vector<pair <string ,double>> possivelSto
     bestRoute.first.first = "";
     bestRoute.first.second = "";
     bestRoute.second = INT_MAX/2; //DISTANCIA EM KM
-    cout<<"entrei"<<endl;
 
     for(auto orig: possivelStopsOrig){
         for(auto dest: possivelStopsDest){
