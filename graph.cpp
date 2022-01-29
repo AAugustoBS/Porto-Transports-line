@@ -119,6 +119,7 @@ void Graph::bfs(int v) {
 int Graph::distance(int a, int b) {
     bfs(a);
     //cout<<nodes[a].codeName<<" "<<nodes[b].codeName<<endl;
+    //cout<<nodes[b].adj.front().line<<endl;
     return nodes[b].dist;
 }
 

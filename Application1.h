@@ -30,6 +30,8 @@ public:
     void lessBusChanges();
     vector<pair <string ,double>> possivelStops(double latitude,double longitude);
     pair<string,double> bestRouteByFewerStops();
+    void setBestRoute(string origem,string destino,double nStops);
+    void callInitialMenu();
 
 
 
@@ -50,6 +52,9 @@ private:
     double destLongitude;
     string destStop;
     bool destType; // true if the user choose Coordenates, false if the user choose Stop
+    pair<pair<string,string>,double> bestroute; // origem,destino,numero de paragens
+    void printResult(pair<pair<string,string>,double> bestroute);
+    int selectOption;
 
 
 };

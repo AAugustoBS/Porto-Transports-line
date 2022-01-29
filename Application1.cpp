@@ -10,22 +10,20 @@ this->busLine = busLine;
 this->mapStops = mapStops;
 }
 
-
-
 void Application1::printOriginMenuOptions() {
     cout<<"Welcome to Porto public transport System!\n\n";
     cout<<"Origin Position: \n";
     cout<<"1. Coordenates\n";
     cout<<"2. Stop\n";
     cout<<"0. Exit\n";
-    originPositionMenu();
 }
 
 void Application1::originPositionMenu(){
         int choose;
-        cin>>choose;
-        bool stateApplication = true;
+        stateApplication = true;
         while(stateApplication) {
+            printOriginMenuOptions();
+            cin>>choose;
             switch (choose) {
                 case 0:
                     stateApplication=false;
@@ -42,7 +40,8 @@ void Application1::originPositionMenu(){
                     break;
 
             }
-            printDestMenuOptions();
+            if(stateApplication)
+                destPositionMenu();
         }
     }
 
@@ -72,14 +71,13 @@ void Application1::printDestMenuOptions() {
     cout<<"1. Coordenates\n";
     cout<<"2. Stop\n";
     cout<<"0. Exit\n";
-    destPositionMenu();
 }
 
 void Application1::destPositionMenu(){
     int choose;
+    printDestMenuOptions();
     cin>>choose;
-    bool stateApplication = true;
-    while(stateApplication) {
+
         switch (choose) {
             case 0:
                 stateApplication=false;
@@ -95,13 +93,15 @@ void Application1::destPositionMenu(){
                 setDestStop();
                 break;
         }
-        printTypeOfTrip();
-    }
+        if(stateApplication)
+            typeOfTrip();
 }
 
 void Application1::setDestCoordenates() {
-    destLatitude = 41.172245;  //Açoreano COORDENATES
-    destLongitude = -8.597604;
+    //destLatitude = 41.172245;  //Açoreano COORDENATES
+    //destLongitude = -8.597604;
+    destLatitude = 41.149875;  //Mercado Bolhao
+    destLongitude = -8.606005;
     /*cout<<"Latitude: ";
     cin>>this->destLatitude;
     cout<<endl;
@@ -124,14 +124,14 @@ void Application1::printTypeOfTrip() {
     cout<<"2. Shorter Distance\n";
     cout<<"3. Less bus changes\n";
     cout<<"0. Exit\n";
-    typeOfTrip();
+    //typeOfTrip();
 }
 
 void Application1::typeOfTrip(){
     int choose;
+    printTypeOfTrip();
     cin>>choose;
-    bool stateApplication = true;
-    while(stateApplication) {
+    selectOption=choose;
         switch (choose) {
             case 0:
                 stateApplication=false;
@@ -144,40 +144,138 @@ void Application1::typeOfTrip(){
                 break;
 
             case 2:
-                //shorterDistance();
+                cin.ignore();
+                shorterDistance();
                 break;
 
             case 3:
+                cin.ignore();
                 //lessBusChanges();
                 break;
         }
     }
-}
 
-void Application1::fewerStops(){
-    pair<string,double> bestroute;
-    if(originType)
-        originPossivelStops = possivelStops(originLatitude,originLongitude);
-    if(destType)
-        destPossivelStops = possivelStops(destLatitude,destLongitude);
 
-    bestroute.second = busLine->distance(mapStops.find("ASP4")->second,mapStops.find("CQ8")->second);
-    cout<<mapStops.find("ASP4")->second<<endl;
-    cout<<mapStops.find("CQ8")->second<<endl;
+void Application1::fewerStops() {
 
-    for(auto i :originPossivelStops){
-        int distance = busLine->distance(mapStops.find(i.first)->second,mapStops.find(destStop)->second);
+    float distance;
+    bestroute.second = INT_MAX / 2;
+
+    if (originType)
+        originPossivelStops = possivelStops(originLatitude, originLongitude);
+
+    if (destType)
+        destPossivelStops = possivelStops(destLatitude, destLongitude);
+
+    if (originType && destType){
+        for (auto i: originPossivelStops) {
+            for (auto j: destPossivelStops) {
+
+                distance = busLine->distance(mapStops.find(i.first)->second, mapStops.find(j.first)->second);
+                if (distance < bestroute.second && distance!=0) {
+                    setBestRoute(i.first, j.first, distance);
+                }
+            }
+        }
     }
+    else if (!originType && !destType) {
+        int distance = busLine->distance(mapStops.find(originStop)->second, mapStops.find(destStop)->second);
+        setBestRoute(originStop, destStop, distance);
+    }
+    else if (!originType && destType) {
 
-
-    stateApplication=false;
-
+        for (auto i: destPossivelStops) {
+            distance = busLine->distance(mapStops.find(originStop)->second, mapStops.find(i.first)->second);
+            if (distance < bestroute.second && distance!=0) {
+                setBestRoute(originStop, i.first, distance);
+            }
+        }
+    }
+    else if (originType && !destType) {
+        for (auto i: originPossivelStops) {
+            distance = busLine->distance(mapStops.find(i.first)->second, mapStops.find(destStop)->second);
+            if (distance < bestroute.second && distance!=0) {
+                setBestRoute(i.first, destStop, distance);
+            }
+        }
+    }
+    printResult(bestroute);
 }
 
-vector<pair <string ,double>> Application1::possivelStops(double latitude,double longitude){
-    return busLine->distancePersonStop(latitude,longitude);
+vector<pair<string, double>> Application1::possivelStops(double latitude, double longitude) {
+    return busLine->distancePersonStop(latitude, longitude);
 }
 
-pair<string,double> Application1::bestRouteByFewerStops(){
 
+void Application1::setBestRoute(string origem, string destino, double nStops) {
+    bestroute.first.first = origem;
+    bestroute.first.second = destino;
+    bestroute.second = nStops;
+}
+
+void Application1::shorterDistance() {
+    double distance;
+    bestroute.second=INT_MAX/2;
+    if (originType)
+        originPossivelStops = possivelStops(originLatitude, originLongitude);
+    if (destType)
+        destPossivelStops = possivelStops(destLatitude, destLongitude);
+
+    if (originType && destType){
+        for (auto i: originPossivelStops) {
+            for (auto j: destPossivelStops) {
+
+                distance = busLine->dijkstra_distance(mapStops.find(i.first)->second, mapStops.find(j.first)->second);
+                if (distance < bestroute.second && distance!=0) {
+                    setBestRoute(i.first, j.first, distance);
+                }
+            }
+        }
+    }
+    else if (!originType && !destType) {
+        distance = busLine->dijkstra_distance(mapStops.find(originStop)->second, mapStops.find(destStop)->second);
+        setBestRoute(originStop, destStop, distance);
+    }
+    else if (!originType && destType) {
+
+        for (auto i: destPossivelStops) {
+            distance = busLine->dijkstra_distance(mapStops.find(originStop)->second, mapStops.find(i.first)->second);
+            if (distance < bestroute.second && distance!=0) {
+                setBestRoute(originStop, i.first, distance);
+            }
+        }
+    }
+    else if (originType && !destType) {
+        for (auto i: originPossivelStops) {
+            distance = busLine->dijkstra_distance(mapStops.find(i.first)->second, mapStops.find(destStop)->second);
+            if (distance < bestroute.second && distance!=0) {
+                setBestRoute(i.first, destStop, distance);
+            }
+        }
+    }
+    printResult(bestroute);
+    /*cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "   Have "
+         << bestroute.second << "Km" << endl;*/
+}
+
+void Application1::printResult(pair<pair<string,string>,double> bestroute){
+    switch (selectOption) {
+        case 1:
+            cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Stops" << endl<<endl<<endl;
+            break;
+        case 2:
+            cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Km" << endl<<endl<<endl;
+            break;
+    }
+    callInitialMenu();
+}
+
+void Application1::callInitialMenu(){
+    int choose;
+    cout<<"You want to search another bus?[1]Yes [0]No :";
+    cin >> choose;
+    cout<<endl;
+    if (choose == 0){
+        stateApplication=false;
+    }
 }

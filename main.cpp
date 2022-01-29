@@ -15,11 +15,12 @@ int main() {
     Graph busLine(2487,true);
     map<string,int> mapStops;
     fillmapStops(mapStops,busLine);
+    readEdge(busLine,mapStops);
     cout<<setprecision(3);
     //cout<<busLine.distance(235,626)<<endl;
 
     Application1 app1(&busLine,mapStops);
-    app1.printOriginMenuOptions();
+    app1.originPositionMenu();
 
     //Application app1(&busLine,mapStops);
     //app1.mainMenu();
