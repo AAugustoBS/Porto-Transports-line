@@ -125,7 +125,6 @@ list<int> Graph::bfs_Path(int a, int b) {
     while(aux != a){
         path.push_front(aux);
         aux = nodes[aux].pred;
-        cout<<aux<<endl;
     }
     path.push_front(a);
     return path;
@@ -182,7 +181,7 @@ void Graph::setDistanceMax(double distance) {
 
 void Graph::showNodeById(int idStop){
    // cout<<idStop<<endl;
-    cout<<nodes[idStop].codeName<<endl;
+    cout<<nodes[idStop].codeName;
 
 }
 
@@ -218,7 +217,6 @@ list<string> Graph::linesListShorterPath(list<int> path) {
    int stop1 = *it;
    advance(it,1);
 
-
    while(it != path.end()){
        int stop2 = *it;
 
@@ -231,7 +229,6 @@ list<string> Graph::linesListShorterPath(list<int> path) {
 }
 
 void Graph::setLineOnList(int stop1,int stop2,list<string> &lines){
-    cout<<"----------------------\n";
     for(auto i: nodes[stop1].adj){
         if(i.dest = stop2){
             lines.push_back(i.line);
