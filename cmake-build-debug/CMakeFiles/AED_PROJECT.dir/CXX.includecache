@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
+iostream
+-
+cmath
+-
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/MinHeap.h
+vector
+-
+unordered_map
+-
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.cpp
+graph.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
+climits
+-
+iostream
+-
+AuxFunctions.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/AuxFunctions.h
+MinHeap.h
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/MinHeap.h
+map
+-
+algorithm
+-
+
+C:/Users/Antonio Augusto/Documents/AED-PROJECT/graph.h
+vector
+-
+list
+-
+iostream
+-
+queue
+-
+map
+-
+
