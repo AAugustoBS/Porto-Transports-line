@@ -296,18 +296,23 @@ void Application1::shorterDistance() {
     list<int> path = busLine->dijkstra_path(mapStops.find(bestroute.first.first)->second,mapStops.find(bestroute.first.second)->second);
     list<string> lines = busLine->linesListShorterPath(path);
     printResultwithLine(bestroute,lines,path);
-    //printResult(bestroute);
-    /*cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "   Have "
-         << bestroute.second << "Km" << endl;*/
 }
 
 void Application1::printResult(pair<pair<string,string>,double> bestroute){
     switch (selectOption) {
         case 1:{
             cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Stops" << endl<<endl<<endl;
-            cout<<mapStops.find(bestroute.first.first)->second;
-            list<int> path = busLine->bfs_Path(mapStops.find(bestroute.first.first)->second,mapStops.find(bestroute.first.second)->second);
 
+            list<int> path = busLine->bfs_Path(mapStops.find(bestroute.first.first)->second,mapStops.find(bestroute.first.second)->second);
+            list<string> lines = busLine->linesListShorterPath(path);
+            list<int>:: iterator it = path.begin();
+            for(auto i: lines){
+                busLine->showNodeById(*it);
+                cout<<" on "<<i<<" until ";
+                advance(it,1);
+                busLine->showNodeById(*it);
+                cout<<endl;
+            }
         break;}
         case 2:
             cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Km" << endl<<endl<<endl;
@@ -329,6 +334,7 @@ void Application1::printResultwithLine(pair<pair<string,string>,double> bestrout
         busLine->showNodeById(stop1);
         cout<<" until ";
         busLine->showNodeById(stop2);
+        cout<<endl;
         stop1 = stop2;
         advance(itPath,1);
         advance(itLine,1);

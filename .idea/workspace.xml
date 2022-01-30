@@ -19,7 +19,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Application1.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AED_PROJECT.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AED_PROJECT.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/Application1.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/Application1.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/graph.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/graph.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph.cpp" afterDir="false" />
     </list>
@@ -123,7 +126,7 @@
       <workItem from="1643480421476" duration="652000" />
       <workItem from="1643555337693" duration="10383000" />
       <workItem from="1643567442920" duration="1514000" />
-      <workItem from="1643573897269" duration="1000" />
+      <workItem from="1643573897269" duration="3442000" />
     </task>
     <task id="LOCAL-00001" summary="Graphs">
       <created>1642880694589</created>
@@ -209,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643565420345</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Doxygen and path implemented">
+      <created>1643574055108</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643574055108</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Doxygen and path implemented">
+      <created>1643574071690</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1643574071690</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

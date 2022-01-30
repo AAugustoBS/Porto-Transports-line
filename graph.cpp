@@ -162,7 +162,7 @@ void Graph::setDistanceMax(double distance) {
 
 void Graph::showNodeById(int idStop){
    // cout<<idStop<<endl;
-    cout<<nodes[idStop].codeName<<endl;
+    cout<<nodes[idStop].codeName;
 
 }
 
