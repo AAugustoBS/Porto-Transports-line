@@ -30,7 +30,11 @@ public:
     void lessBusChanges();
     vector<pair <string ,double>> possivelStops(double latitude,double longitude);
     pair<string,double> bestRouteByFewerStops();
+    void printResultwithLine(pair<pair<string,string>,double> bestroute,list<string> lines,list<int> path);
     void setBestRoute(string origem,string destino,double nStops);
+    /**
+     *Ask if the user want to back for initial main menu
+     */
     void callInitialMenu();
 
 

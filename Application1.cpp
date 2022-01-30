@@ -252,6 +252,7 @@ void Application1::setBestRoute(string origem, string destino, double nStops) {
 
 void Application1::shorterDistance() {
     double distance;
+
     bestroute.second=INT_MAX/2;
     if (originType)
         originPossivelStops = possivelStops(originLatitude, originLongitude);
@@ -290,7 +291,11 @@ void Application1::shorterDistance() {
             }
         }
     }
-    printResult(bestroute);
+
+    list<int> path = busLine->dijkstra_path(mapStops.find(bestroute.first.first)->second,mapStops.find(bestroute.first.second)->second);
+    list<string> lines = busLine->linesListShorterPath(path);
+    printResultwithLine(bestroute,lines,path);
+    //printResult(bestroute);
     /*cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "   Have "
          << bestroute.second << "Km" << endl;*/
 }
@@ -305,6 +310,25 @@ void Application1::printResult(pair<pair<string,string>,double> bestroute){
             break;
     }
     callInitialMenu();
+}
+
+void Application1::printResultwithLine(pair<pair<string,string>,double> bestroute,list<string> lines,list<int> path){
+    cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Km" << endl<<endl<<endl;
+
+    list<int>:: iterator itPath = path.begin();
+    list<string>::iterator itLine = lines.begin();
+    int stop1 = *itPath;
+    advance(itPath,1);
+    while(itPath != path.end()){
+        int stop2 = *itPath;
+        cout<<"Take "<<*itLine<<" from ";
+        busLine->showNodeById(stop1);
+        cout<<" until ";
+        busLine->showNodeById(stop2);
+        stop1 = stop2;
+        advance(itPath,1);
+        advance(itLine,1);
+    }
 }
 
 void Application1::callInitialMenu(){

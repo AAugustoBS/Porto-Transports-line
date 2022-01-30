@@ -115,6 +115,20 @@ void Graph::bfs(int v) {
     }
     }
 
+list<int> Graph::bfs_Path(int a, int b) {
+    bfs(a);
+    list<int> path;
+    int aux = b;
+    while(aux != a){
+        path.push_front(aux);
+        aux = nodes[aux].pred;
+
+    }
+
+    path.push_front(a);
+    return path;
+}
+
 int Graph::distance(int a, int b) {
     bfs(a);
     //cout<<nodes[a].codeName<<" "<<nodes[b].codeName<<endl;
@@ -166,7 +180,7 @@ void Graph::setDistanceMax(double distance) {
 
 void Graph::showNodeById(int idStop){
    // cout<<idStop<<endl;
-    cout<<nodes[idStop].codeName;
+    cout<<nodes[idStop].codeName<<endl;
 
 }
 
@@ -188,9 +202,38 @@ void Graph::stopNextStop(map<string,int> mapStops) {
     for(auto stop1 : nodes){
         for(auto stop2 : nodes){
             distanceBetweenStops = haversineFormula(stop1.lat,stop1.log,stop2.lat,stop2.log);
-            if(distanceBetweenStops <= 0.220 && distanceBetweenStops != 0){
+            if(distanceBetweenStops <= 0.3 && distanceBetweenStops != 0){
                 addEdge(mapStops.find(stop1.codeName)->second,mapStops.find(stop2.codeName)->second,distanceBetweenStops,"Walk");
             }
+        }
+    }
+}
+
+list<string> Graph::linesListShorterPath(list<int> path) {
+    list<string> lines;
+
+   list<int>::iterator it = path.begin();
+   int stop1 = *it;
+   advance(it,1);
+
+
+   while(it != path.end()){
+       int stop2 = *it;
+
+       setLineOnList(stop1,stop2,lines);
+
+       stop1 = stop2;
+       advance(it,1);
+   }
+   return lines;
+}
+
+void Graph::setLineOnList(int stop1,int stop2,list<string> &lines){
+    cout<<"----------------------\n";
+    for(auto i: nodes[stop1].adj){
+        if(i.dest = stop2){
+            lines.push_back(i.line);
+            break;
         }
     }
 }

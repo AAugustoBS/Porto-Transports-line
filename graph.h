@@ -71,6 +71,8 @@ public:
 
     void bfs(int v);
 
+    list<int> bfs_Path(int a,int b);
+
     void setDistanceMax(double distance );
 
     vector<pair<string, double>> distancePersonStop(double lat, double log);
@@ -80,6 +82,10 @@ public:
     void setStoplines(int idStops);
 
     const vector<Edge> &getStoplines();
+
+    list<string> linesListShorterPath(list<int> path);
+
+    void setLineOnList(int stop1,int stop2,list<string> &lines);
 
     void createtrajeto(queue<int> q);
 

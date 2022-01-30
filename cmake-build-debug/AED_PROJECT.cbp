@@ -5,7 +5,7 @@
 		<Option title="AED_PROJECT"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\docs\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug"/>
@@ -54,6 +54,16 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED_PROJECT/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Doxygen">
+				<Option working_dir="C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 Doxygen"/>
 					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -115,6 +125,9 @@
 		</Unit>
 		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Antonio Augusto/Documents/AED-PROJECT/docs/Doxyfile">
+			<Option virtualFolder="CMake Files\docs\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
