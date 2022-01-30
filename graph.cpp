@@ -74,7 +74,6 @@ void Graph::getPath(int src,int dest) {
 double Graph::dijkstra_distance(int a, int b) {
     dijkstra(a);
     return nodes[b].dist;
-
 }
 
 
@@ -87,7 +86,6 @@ list<int> Graph::dijkstra_path(int a, int b) {
     path.push_front(v);
 
     while(v!= a){
-        //cout<<v<<endl;
         v=nodes[v].pred;
         path.push_front(v);
     }
@@ -96,11 +94,11 @@ list<int> Graph::dijkstra_path(int a, int b) {
 
 void Graph::bfs(int v) {
     for (int v=1; v<=n; v++) nodes[v].visited = false;
-    queue<int> q; // queue of unvisited nodes
+    queue<int> q;
     q.push(v);
     nodes[v].dist = 0;
     nodes[v]. visited = true;
-    while (!q.empty()) { // while there are still unvisited nodes
+    while (!q.empty()) {
         int u = q.front();
         q.pop();
 
@@ -114,18 +112,16 @@ void Graph::bfs(int v) {
             }
         }
     }
-    }
+}
 
 list<int> Graph::bfs_Path(int a, int b) {
     bfs(a);
-
 
     list<int> path;
     int aux = b;
     while(aux != a){
         path.push_front(aux);
         aux = nodes[aux].pred;
-        cout<<aux<<endl;
     }
     path.push_front(a);
     return path;
@@ -133,13 +129,7 @@ list<int> Graph::bfs_Path(int a, int b) {
 
 int Graph::distance(int a, int b) {
     bfs(a);
-    //cout<<nodes[a].codeName<<" "<<nodes[b].codeName<<endl;
-    //cout<<nodes[b].adj.front().line<<endl;
     return nodes[b].dist;
-}
-
-void Graph::createtrajeto(queue <int> q){
-
 }
 
 void Graph::getEdge(int idStops) {
@@ -148,18 +138,10 @@ void Graph::getEdge(int idStops) {
     }
 }
 
-bool Graph::sortBySecond(const pair<Node, double> &a, const pair<Node, double> &b){
-    return (a.second < b.second);
-}
-
-
 vector<pair<string, double>> Graph:: distancePersonStop(double lat, double log) {
 
    pair<string ,double> pairaux ;
    vector<pair<string, double>> paragensProx ;
-
-   //paragensProx.push_back(1);
-   //paragensProx.push_back(3);
 
     for(auto i: nodes){
         double dist=haversineFormula(lat,log,i.lat,i.log);
@@ -171,9 +153,7 @@ vector<pair<string, double>> Graph:: distancePersonStop(double lat, double log) 
         }
     }
 
-    //sort(paragensProx.begin(), paragensProx.end());
     return paragensProx;
-
 }
 
 void Graph::setDistanceMax(double distance) {
@@ -185,18 +165,6 @@ void Graph::showNodeById(int idStop){
     cout<<nodes[idStop].codeName<<endl;
 
 }
-
-void Graph::setStoplines(int idStops) {
-    for(auto i:nodes[idStops].adj){
-        stoplines.push_back(i);
-    }
-
-}
-
-const vector<Graph::Edge> &Graph::getStoplines() {
-    return stoplines;
-}
-
 
 void Graph::stopNextStop(map<string,int> mapStops) {
     double distanceBetweenStops;
@@ -218,7 +186,6 @@ list<string> Graph::linesListShorterPath(list<int> path) {
    int stop1 = *it;
    advance(it,1);
 
-
    while(it != path.end()){
        int stop2 = *it;
 
@@ -231,7 +198,6 @@ list<string> Graph::linesListShorterPath(list<int> path) {
 }
 
 void Graph::setLineOnList(int stop1,int stop2,list<string> &lines){
-    cout<<"----------------------\n";
     for(auto i: nodes[stop1].adj){
         if(i.dest = stop2){
             lines.push_back(i.line);

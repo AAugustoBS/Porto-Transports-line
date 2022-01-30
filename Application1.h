@@ -37,11 +37,6 @@ public:
      */
     void callInitialMenu();
 
-
-
-
-
-
 private:
     bool stateApplication;
     Graph *busLine;
@@ -59,8 +54,7 @@ private:
     pair<pair<string,string>,double> bestroute; // origem,destino,numero de paragens
     void printResult(pair<pair<string,string>,double> bestroute);
     int selectOption;
-
-
+    
 };
 
 
