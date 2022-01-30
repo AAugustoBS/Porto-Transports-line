@@ -109,6 +109,7 @@ void Graph::bfs(int v) {
             if (!nodes[w].visited) {
                 q.push(w);
                 nodes[w].visited = true;
+                nodes[w].pred = u;
                 nodes[w].dist = nodes[u].dist + 1;
             }
         }
@@ -117,14 +118,15 @@ void Graph::bfs(int v) {
 
 list<int> Graph::bfs_Path(int a, int b) {
     bfs(a);
+
+
     list<int> path;
     int aux = b;
     while(aux != a){
         path.push_front(aux);
         aux = nodes[aux].pred;
-
+        cout<<aux<<endl;
     }
-
     path.push_front(a);
     return path;
 }

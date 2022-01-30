@@ -236,6 +236,7 @@ void Application1::fewerStops() {
             }
         }
     }
+
     printResult(bestroute);
 }
 
@@ -302,9 +303,12 @@ void Application1::shorterDistance() {
 
 void Application1::printResult(pair<pair<string,string>,double> bestroute){
     switch (selectOption) {
-        case 1:
+        case 1:{
             cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Stops" << endl<<endl<<endl;
-            break;
+            cout<<mapStops.find(bestroute.first.first)->second;
+            list<int> path = busLine->bfs_Path(mapStops.find(bestroute.first.first)->second,mapStops.find(bestroute.first.second)->second);
+
+        break;}
         case 2:
             cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Km" << endl<<endl<<endl;
             break;
