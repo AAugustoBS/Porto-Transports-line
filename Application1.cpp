@@ -11,65 +11,78 @@ this->mapStops = mapStops;
 }
 
 void Application1::printOriginMenuOptions() {
-    cout<<"Welcome to Porto public transport System!\n\n";
-    cout<<"Origin Position: \n";
-    cout<<"1. Coordenates\n";
-    cout<<"2. Stop\n";
+    cout<<"PORTO PUBLIC TRANSPORT SYSTEM\n";
+    cout<<"-----------------------------------------\n";
+    cout<<"Select the way you will insert your ORIGIN position:\n";
+    cout<<"1. Coordinates\n";
+    cout<<"2. Code of Stop\n";
     cout<<"0. Exit\n";
 }
 
 void Application1::originPositionMenu(){
-        int choose;
-        stateApplication = true;
-        while(stateApplication) {
-            printOriginMenuOptions();
-            cin>>choose;
-            switch (choose) {
-                case 0:
-                    stateApplication=false;
-                    break;
+    int choose;
+    stateApplication = true;
+    while(stateApplication) {
+        printOriginMenuOptions();
+        cin>>choose;
 
-                case 1:
-                    originType=true;
-                    setOriginCoordenates();
-                    break;
-
-                case 2:
-                    originType=false;
-                    setOriginStop();
-                    break;
-
-            }
-            if(stateApplication)
-                destPositionMenu();
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid option, enter again!\n\n";
+            originPositionMenu();
+            break;
         }
+
+        switch (choose) {
+            case 0:
+                stateApplication=false;
+                break;
+            case 1:
+                originType=true;
+                setOriginCoordenates();
+                break;
+            case 2:
+                originType=false;
+                setOriginStop();
+                break;
+            default:
+                cout << "Invalid option, enter again!\n\n";
+                originPositionMenu();
+                break;
+        }
+
+        if(stateApplication)
+            destPositionMenu();
     }
+}
 
 void Application1::setOriginCoordenates(){
-    originLatitude = 41.180548;  //UHUB COORDENATES
-    originLongitude = -8.594938;
-    /*
+    //originLatitude = 41.180548;  //UHUB COORDENATES
+    //originLongitude = -8.594938;
+
     cout<<"Latitude: ";
     cin>>this->originLatitude;
     cout<<endl;
     cout<<"Longitude: ";
     cin>>this->originLongitude;
-    cout<<endl;*/
+    cout<<endl;
 }
 
 void Application1::setOriginStop(){
-    originStop="ASP3";
-    /*
+    //originStop="ASP3";
+
     cout<<"Origin Stop: ";
     cin>>this->originStop;
-    cout<<endl;*/
+    cout<<endl;
 }
 
 void Application1::printDestMenuOptions() {
-    cout<<"Welcome to Porto public transport System!\n\n";
-    cout<<"Destination Position: \n";
-    cout<<"1. Coordenates\n";
-    cout<<"2. Stop\n";
+    cout<<"PORTO PUBLIC TRANSPORT SYSTEM\n";
+    cout<<"-----------------------------------------\n";
+    cout<<"Select the way you will insert your DESTINATION position:\n";
+    cout<<"1. Coordinates\n";
+    cout<<"2. Code of Stop\n";
     cout<<"0. Exit\n";
 }
 
@@ -78,48 +91,61 @@ void Application1::destPositionMenu(){
     printDestMenuOptions();
     cin>>choose;
 
-        switch (choose) {
-            case 0:
-                stateApplication=false;
-                break;
+    if(cin.fail()){
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid option, enter again!\n\n";
+        destPositionMenu();
+    }
 
-            case 1:
-                destType=true;
-                setDestCoordenates();
-                break;
+    switch (choose) {
+        case 0:
+            stateApplication=false;
+            break;
+        case 1:
+            destType=true;
+            setDestCoordenates();
+            break;
+        case 2:
+            destType=false;
+            setDestStop();
+            break;
+        default:
+            cout << "Invalid option, enter again!\n\n";
+            destPositionMenu();
+            break;
+    }
 
-            case 2:
-                destType=false;
-                setDestStop();
-                break;
-        }
-        if(stateApplication)
-            typeOfTrip();
+    if(stateApplication)
+        typeOfTrip();
+
 }
 
 void Application1::setDestCoordenates() {
     //destLatitude = 41.172245;  //Açoreano COORDENATES
     //destLongitude = -8.597604;
-    destLatitude = 41.149875;  //Mercado Bolhao
-    destLongitude = -8.606005;
-    /*cout<<"Latitude: ";
+    //destLatitude = 41.149875;  //Mercado Bolhao
+    //destLongitude = -8.606005;
+    cout<<"Latitude: ";
     cin>>this->destLatitude;
     cout<<endl;
     cout<<"Longitude: ";
     cin>>this->destLongitude;
-    cout<<endl;*/
+    cout<<endl;
 }
 
 void Application1::setDestStop(){
-    destStop="MLAR2";
-    /*cout<<"Dest Stop: ";
+    //destStop="MLAR2";
+
+    cout<<"Destination Stop: ";
     cin>>this->destStop;
-    cout<<endl;*/
+    cout<<endl;
 }
 
 void Application1::printTypeOfTrip() {
-    cout<<"Welcome to Porto public transport System!\n\n";
-    cout<<"Type of your trip: \n";
+    cout<<"PORTO PUBLIC TRANSPORT SYSTEM\n";
+    cout<<"-----------------------------------------\n";
+    cout<<"Select the type of your trip:\n";
     cout<<"1. Fewer stops\n";
     cout<<"2. Shorter Distance\n";
     cout<<"3. Less bus changes\n";
@@ -132,28 +158,39 @@ void Application1::typeOfTrip(){
     printTypeOfTrip();
     cin>>choose;
     selectOption=choose;
-        switch (choose) {
-            case 0:
-                stateApplication=false;
-                break;
 
-            case 1:
-                cin.ignore();
-                fewerStops();
-                //cin.ignore();
-                break;
-
-            case 2:
-                cin.ignore();
-                shorterDistance();
-                break;
-
-            case 3:
-                cin.ignore();
-                //lessBusChanges();
-                break;
-        }
+    if(cin.fail()){
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid option, enter again!\n\n";
+        typeOfTrip();
     }
+
+    switch (choose) {
+        case 0:
+            stateApplication=false;
+            break;
+
+        case 1:
+            cin.ignore();
+            fewerStops();
+            //cin.ignore();
+            break;
+        case 2:
+            cin.ignore();
+            shorterDistance();
+            break;
+
+        case 3:
+            cin.ignore();
+            //lessBusChanges();
+            break;
+        default:
+            cout << "Invalid option, enter again!\n\n";
+            typeOfTrip();
+            break;
+    }
+}
 
 
 void Application1::fewerStops() {
