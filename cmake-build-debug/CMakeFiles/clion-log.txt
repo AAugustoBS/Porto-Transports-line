@@ -1,5 +1,6 @@
-"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "C:\Users\Antonio Augusto\Documents\AED-PROJECT"
-Doxygen build started
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT"
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+Doxygen needs to be installed to generate the documentation.
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Antonio Augusto/Documents/AED-PROJECT/cmake-build-debug
+-- Build files have been written to: /Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug

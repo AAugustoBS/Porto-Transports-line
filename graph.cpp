@@ -18,7 +18,7 @@ void Graph::addEdge(int src, int dest, float weight,string name) {
 
 void Graph::setInfoNode(int idNode,vector<string>info) {
         nodes[idNode].codeName = info[0];
-        nodes[idNode].adress = info[1];
+        nodes[idNode].address = info[1];
         nodes[idNode].zone = info[2];
         nodes[idNode].lat = stod(info[3]);
         nodes[idNode].log = stod(info[4]);
@@ -172,7 +172,7 @@ void Graph::stopNextStop(map<string,int> mapStops) {
     for(auto stop1 : nodes){
         for(auto stop2 : nodes){
             distanceBetweenStops = haversineFormula(stop1.lat,stop1.log,stop2.lat,stop2.log);
-            if(distanceBetweenStops <= 0.3 && distanceBetweenStops != 0){
+            if(distanceBetweenStops <= distMax && distanceBetweenStops != 0){
                 addEdge(mapStops.find(stop1.codeName)->second,mapStops.find(stop2.codeName)->second,distanceBetweenStops,"Walk");
             }
         }
