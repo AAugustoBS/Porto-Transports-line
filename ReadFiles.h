@@ -9,12 +9,11 @@
 #define AED_PROJECT_READFILES_H
 using namespace std;
 
-
-/*
- * Necessary to read cvs files
+/**
+ * split a given string into substrings and save that information in a vector
+ * @param line all information that belongs to one line
+ * @param stops information that will be splited
  */
-
-
 void splitWord(vector<string> &line, string stops){
     string del = ",";
     int start = 0;
@@ -26,9 +25,10 @@ void splitWord(vector<string> &line, string stops){
     }
     line.push_back(stops.substr(start, end - start));
 }
-
-/*
- * This function will read stops.csv file and fill our mapStops with Oporto's bus stops information.
+/**
+ * Read stops.csv file and fill the map that maps stops and numbers
+ * @param mapStops map
+ * @param busline graph with information about lines and stops
  */
 void fillmapStops(map<string,int> &mapStops,Graph &busline){
 
@@ -50,7 +50,13 @@ void fillmapStops(map<string,int> &mapStops,Graph &busline){
         idStop++;
     }
 }
-
+/**
+ * Read all lines files and save that information in the graph
+ * @param fileName name of the file
+ * @param lineName name of the line
+ * @param busline graph with information about the lines and stops
+ * @param mapStops
+ */
 void readLine(string fileName,string lineName,Graph &busline,map<string,int> mapStops){
     fstream file(fileName);
     string line;
@@ -69,7 +75,11 @@ void readLine(string fileName,string lineName,Graph &busline,map<string,int> map
     }
 
 }
-
+/**
+ * read the lines file
+ * @param busline graph with information about lines and stops
+ * @param mapStops map with information about stops and corresponding node number
+ */
 void readEdge(Graph &busline,map<string,int> mapStops){
 
     fstream file("dataset/lines.csv");
@@ -84,9 +94,5 @@ void readEdge(Graph &busline,map<string,int> mapStops){
 
         readLine(fileToOpen2,line,busline,mapStops);
     }
-
 }
-
-
-
 #endif //AED_PROJECT_READFILES_H

@@ -17,14 +17,31 @@ using namespace std;
 template <class K, class V>
 class MinHeap {
     struct Node { // An element of the heap: a pair (key, value)
+        /**
+         * key of the element
+         */
         K key;
+        /**
+         * value of the element
+         */
         V value;
     };
-
-    int size;                  // Number of elements in heap
-    int maxSize;               // Maximum number of elements in heap
-    vector<Node> a;            // The heap array
-    unordered_map<K, int> pos; // maps a key into its position on the array a
+    /**
+     * number of elements in heap
+     */
+    int size;
+    /**
+     * max elements in the heap
+     */
+    int maxSize;
+    /**
+     * the heap array
+     */
+    vector<Node> a;
+    /**
+     * maps a key into its position on the array a
+     */
+    unordered_map<K, int> pos;
     const K KEY_NOT_FOUND;
 
     void upHeap(int i);
@@ -32,11 +49,39 @@ class MinHeap {
     void swap(int i1, int i2);
 
 public:
-    MinHeap(int n, const K& notFound); // Create a min-heap for a max of n pairs (K,V) with notFound returned when empty
-    int getSize();              // Return number of elements in the heap
-    bool hasKey(const K& key);  // Heap has key?
-    void insert(const K& key, const V& value);      // Insert (key, value) on the heap
-    void decreaseKey(const K& key, const V& value); // Decrease value of key
+    /**
+     * Create a min-heap for a max of n pairs (K,V) with notFound returned when empty
+     * @param n max elements in the heap
+     * @param notFound value when empty
+     */
+    MinHeap(int n, const K& notFound);
+    /**
+     * number of elements in the heap
+     * @return number of elements in the heap
+     */
+    int getSize();
+    /**
+     * if key exists in the heap
+     * @param key key to find
+     * @return true if key is found
+     */
+    bool hasKey(const K& key);
+    /**
+     * insert a key and a value on the heap
+     * @param key key
+     * @param value value
+     */
+    void insert(const K& key, const V& value);
+    /**
+     * decrease value of a key
+     * @param key key
+     * @param value value
+     */
+    void decreaseKey(const K& key, const V& value);
+    /**
+     * remove and return the key with smaller value
+     * @return key with smaller value
+     */
     K removeMin(); // remove and return key with smaller value
 };
 

@@ -7,6 +7,14 @@ using namespace std;
 #ifndef AED_PROJECT_AUXFUNCTIONS_H
 #define AED_PROJECT_AUXFUNCTIONS_H
 
+/**
+ * Formula to calculate distance given coordinates
+ * @param lat1 latitude of first point
+ * @param lon1 longitude of first point
+ * @param lat2 latitude of second point
+ * @param lon2 longitude of second point
+ * @return
+ */
 static double haversineFormula(double lat1, double lon1,
                         double lat2, double lon2)
 {
