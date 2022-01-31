@@ -21,6 +21,12 @@ void Application1::printOriginMenuOptions() {
 
 void Application1::originPositionMenu(){
     int choose;
+    double distMax;
+    cout<<"Set your max distance (Km): "<<endl;
+    cin>>distMax;
+    busLine->setDistanceMax(distMax);
+    cin.clear();
+    cin.ignore(1000,'\n');
     stateApplication = true;
     while(stateApplication) {
         printOriginMenuOptions();
@@ -74,6 +80,7 @@ void Application1::setOriginStop(){
 
     cout<<"Origin Stop: ";
     cin>>this->originStop;
+    for (auto & c: originStop) c = toupper(c);
     cout<<endl;
 }
 
@@ -139,6 +146,7 @@ void Application1::setDestStop(){
 
     cout<<"Destination Stop: ";
     cin>>this->destStop;
+    for (auto & c: destStop) c = toupper(c);
     cout<<endl;
 }
 
@@ -148,7 +156,6 @@ void Application1::printTypeOfTrip() {
     cout<<"Select the type of your trip:\n";
     cout<<"1. Fewer stops\n";
     cout<<"2. Shorter Distance\n";
-    cout<<"3. Less bus changes\n";
     cout<<"0. Exit\n";
     //typeOfTrip();
 }
@@ -296,33 +303,30 @@ void Application1::shorterDistance() {
     list<int> path = busLine->dijkstra_path(mapStops.find(bestroute.first.first)->second,mapStops.find(bestroute.first.second)->second);
     list<string> lines = busLine->linesListShorterPath(path);
     printResultwithLine(bestroute,lines,path);
+    callInitialMenu();
 }
 
 void Application1::printResult(pair<pair<string,string>,double> bestroute){
-    switch (selectOption) {
-        case 1:{
-            cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Stops" << endl<<endl<<endl;
+    cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Stops" << endl<<endl;
+    cout << "Your path is:"<<endl;
 
-            list<int> path = busLine->bfs_Path(mapStops.find(bestroute.first.first)->second,mapStops.find(bestroute.first.second)->second);
-            list<string> lines = busLine->linesListShorterPath(path);
-            list<int>:: iterator it = path.begin();
-            for(auto i: lines){
-                busLine->showNodeById(*it);
-                cout<<" on "<<i<<" until ";
-                advance(it,1);
-                busLine->showNodeById(*it);
-                cout<<endl;
-            }
-        break;}
-        case 2:
-            cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Km" << endl<<endl<<endl;
-            break;
+    list<int> path = busLine->bfs_Path(mapStops.find(bestroute.first.first)->second,mapStops.find(bestroute.first.second)->second);
+    list<string> lines = busLine->linesListShorterPath(path);
+    list<int>:: iterator it = path.begin();
+    for(auto i: lines){
+        busLine->showNodeById(*it);
+        cout<<" on "<<i<<" until ";
+        advance(it,1);
+        busLine->showNodeById(*it);
+        cout<<endl;
     }
+    cout<<endl;
     callInitialMenu();
 }
 
 void Application1::printResultwithLine(pair<pair<string,string>,double> bestroute,list<string> lines,list<int> path){
-    cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Km" << endl<<endl<<endl;
+    cout << "From: " << bestroute.first.first << "  To: " << bestroute.first.second << "  Have " << bestroute.second << " Km" << endl<<endl;
+    cout << "Your path is:"<<endl;
 
     list<int>:: iterator itPath = path.begin();
     list<string>::iterator itLine = lines.begin();
@@ -339,6 +343,7 @@ void Application1::printResultwithLine(pair<pair<string,string>,double> bestrout
         advance(itPath,1);
         advance(itLine,1);
     }
+    cout<<endl;
 }
 
 void Application1::callInitialMenu(){
@@ -350,3 +355,4 @@ void Application1::callInitialMenu(){
         stateApplication=false;
     }
 }
+
