@@ -5,116 +5,120 @@
 		<Option title="AED_PROJECT"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\docs\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug"/>
+				<Option working_dir="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AED_PROJECT">
-				<Option output="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug/AED_PROJECT" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug"/>
+				<Option output="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/AED_PROJECT.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED_PROJECT"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED_PROJECT"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AED_PROJECT/fast">
-				<Option output="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug/AED_PROJECT" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug"/>
+				<Option output="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/AED_PROJECT.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED_PROJECT/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luispaiva/Desktop/Trabalho\ ldts/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED_PROJECT/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Doxygen">
+				<Option working_dir="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 Doxygen"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/Application.cpp">
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/Application1.cpp">
 			<Option target="AED_PROJECT"/>
 		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/Application.h">
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/Application1.h">
 			<Option target="AED_PROJECT"/>
 		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/Application1.cpp">
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/AuxFunctions.h">
 			<Option target="AED_PROJECT"/>
 		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/Application1.h">
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/MinHeap.h">
 			<Option target="AED_PROJECT"/>
 		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/AuxFunctions.h">
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/ReadFiles.h">
 			<Option target="AED_PROJECT"/>
 		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/MinHeap.h">
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/graph.cpp">
 			<Option target="AED_PROJECT"/>
 		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug/ReadFiles.cpp">
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/graph.h">
 			<Option target="AED_PROJECT"/>
 		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug/ReadFiles.h">
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/main.cpp">
 			<Option target="AED_PROJECT"/>
 		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/graph.cpp">
-			<Option target="AED_PROJECT"/>
-		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/graph.h">
-			<Option target="AED_PROJECT"/>
-		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/main.cpp">
-			<Option target="AED_PROJECT"/>
-		</Unit>
-		<Unit filename="/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/CMakeLists.txt">
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/docs/Doxyfile">
+			<Option virtualFolder="CMake Files\docs\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

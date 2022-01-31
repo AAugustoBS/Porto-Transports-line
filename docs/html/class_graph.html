@@ -72,76 +72,609 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a18b4f6dec368300991b68dd75e39a5e9"><td class="memItemLeft" align="right" valign="top"><a id="a18b4f6dec368300991b68dd75e39a5e9" name="a18b4f6dec368300991b68dd75e39a5e9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Graph</b> (int nodes, bool dir=false)</td></tr>
+<tr class="memitem:a18b4f6dec368300991b68dd75e39a5e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a18b4f6dec368300991b68dd75e39a5e9">Graph</a> (int nodes, bool dir=false)</td></tr>
 <tr class="separator:a18b4f6dec368300991b68dd75e39a5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a492f845b4a73e14fd031f94609a79f96"><td class="memItemLeft" align="right" valign="top"><a id="a492f845b4a73e14fd031f94609a79f96" name="a492f845b4a73e14fd031f94609a79f96"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addEdge</b> (int src, int dest, float weight, string name)</td></tr>
+<tr class="memitem:a492f845b4a73e14fd031f94609a79f96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a492f845b4a73e14fd031f94609a79f96">addEdge</a> (int src, int dest, float weight, string name)</td></tr>
 <tr class="separator:a492f845b4a73e14fd031f94609a79f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae46408c39518b0a1e2f6e86f5e06727f"><td class="memItemLeft" align="right" valign="top"><a id="ae46408c39518b0a1e2f6e86f5e06727f" name="ae46408c39518b0a1e2f6e86f5e06727f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>showNodeById</b> (int idStop)</td></tr>
+<tr class="memitem:ae46408c39518b0a1e2f6e86f5e06727f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ae46408c39518b0a1e2f6e86f5e06727f">showNodeById</a> (int idStop)</td></tr>
 <tr class="separator:ae46408c39518b0a1e2f6e86f5e06727f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38c5e5207f1e4d0bf6977dca1b525819"><td class="memItemLeft" align="right" valign="top"><a id="a38c5e5207f1e4d0bf6977dca1b525819" name="a38c5e5207f1e4d0bf6977dca1b525819"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stopNextStop</b> (map&lt; string, int &gt; mapStops)</td></tr>
+<tr class="memitem:a38c5e5207f1e4d0bf6977dca1b525819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a38c5e5207f1e4d0bf6977dca1b525819">stopNextStop</a> (map&lt; string, int &gt; mapStops)</td></tr>
 <tr class="separator:a38c5e5207f1e4d0bf6977dca1b525819"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c722bbc1821db92c8cfa821dc7b7e48"><td class="memItemLeft" align="right" valign="top"><a id="a3c722bbc1821db92c8cfa821dc7b7e48" name="a3c722bbc1821db92c8cfa821dc7b7e48"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setInfoNode</b> (int idNode, vector&lt; string &gt;info)</td></tr>
+<tr class="memitem:a3c722bbc1821db92c8cfa821dc7b7e48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a3c722bbc1821db92c8cfa821dc7b7e48">setInfoNode</a> (int idNode, vector&lt; string &gt;info)</td></tr>
 <tr class="separator:a3c722bbc1821db92c8cfa821dc7b7e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa5cf100f72c391e947613290509245d"><td class="memItemLeft" align="right" valign="top"><a id="aaa5cf100f72c391e947613290509245d" name="aaa5cf100f72c391e947613290509245d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getPath</b> (int src, int dest)</td></tr>
+<tr class="memitem:aaa5cf100f72c391e947613290509245d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aaa5cf100f72c391e947613290509245d">getPath</a> (int src, int dest)</td></tr>
 <tr class="separator:aaa5cf100f72c391e947613290509245d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7f9bab6ddd91c0d0435c4c029bd967c"><td class="memItemLeft" align="right" valign="top"><a id="ad7f9bab6ddd91c0d0435c4c029bd967c" name="ad7f9bab6ddd91c0d0435c4c029bd967c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setInfoLine</b> (int src, int dest, string lineName)</td></tr>
+<tr class="memitem:ad7f9bab6ddd91c0d0435c4c029bd967c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ad7f9bab6ddd91c0d0435c4c029bd967c">setInfoLine</a> (int src, int dest, string lineName)</td></tr>
 <tr class="separator:ad7f9bab6ddd91c0d0435c4c029bd967c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4a713e518661ddcc56f0e6b3caa7252"><td class="memItemLeft" align="right" valign="top"><a id="ab4a713e518661ddcc56f0e6b3caa7252" name="ab4a713e518661ddcc56f0e6b3caa7252"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>showNodes</b> ()</td></tr>
-<tr class="separator:ab4a713e518661ddcc56f0e6b3caa7252"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad089f1e99336ee6f210d80c2b21c4814"><td class="memItemLeft" align="right" valign="top"><a id="ad089f1e99336ee6f210d80c2b21c4814" name="ad089f1e99336ee6f210d80c2b21c4814"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getEdge</b> (int idStops)</td></tr>
+<tr class="memitem:ad089f1e99336ee6f210d80c2b21c4814"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ad089f1e99336ee6f210d80c2b21c4814">getEdge</a> (int idStops)</td></tr>
 <tr class="separator:ad089f1e99336ee6f210d80c2b21c4814"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f995601c667d9c0586c288887a79a02"><td class="memItemLeft" align="right" valign="top"><a id="a7f995601c667d9c0586c288887a79a02" name="a7f995601c667d9c0586c288887a79a02"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>dijkstra_distance</b> (int a, int b)</td></tr>
+<tr class="memitem:a7f995601c667d9c0586c288887a79a02"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a7f995601c667d9c0586c288887a79a02">dijkstra_distance</a> (int a, int b)</td></tr>
 <tr class="separator:a7f995601c667d9c0586c288887a79a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68dee2186fca9890aecf5ee5c22cb6ab"><td class="memItemLeft" align="right" valign="top"><a id="a68dee2186fca9890aecf5ee5c22cb6ab" name="a68dee2186fca9890aecf5ee5c22cb6ab"></a>
-list&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dijkstra_path</b> (int a, int b)</td></tr>
+<tr class="memitem:a68dee2186fca9890aecf5ee5c22cb6ab"><td class="memItemLeft" align="right" valign="top">list&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a68dee2186fca9890aecf5ee5c22cb6ab">dijkstra_path</a> (int a, int b)</td></tr>
 <tr class="separator:a68dee2186fca9890aecf5ee5c22cb6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1e45e27c60711dadec619ca17e830a4"><td class="memItemLeft" align="right" valign="top"><a id="ae1e45e27c60711dadec619ca17e830a4" name="ae1e45e27c60711dadec619ca17e830a4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>bfs</b> (int v)</td></tr>
+<tr class="memitem:ae1e45e27c60711dadec619ca17e830a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ae1e45e27c60711dadec619ca17e830a4">bfs</a> (int v)</td></tr>
 <tr class="separator:ae1e45e27c60711dadec619ca17e830a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38da972f1f090eff252739cd251b8201"><td class="memItemLeft" align="right" valign="top"><a id="a38da972f1f090eff252739cd251b8201" name="a38da972f1f090eff252739cd251b8201"></a>
-list&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>bfs_Path</b> (int a, int b)</td></tr>
+<tr class="memitem:a38da972f1f090eff252739cd251b8201"><td class="memItemLeft" align="right" valign="top">list&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a38da972f1f090eff252739cd251b8201">bfs_Path</a> (int a, int b)</td></tr>
 <tr class="separator:a38da972f1f090eff252739cd251b8201"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55937c5216b3f92e7ba3e89e0c2fe4ff"><td class="memItemLeft" align="right" valign="top"><a id="a55937c5216b3f92e7ba3e89e0c2fe4ff" name="a55937c5216b3f92e7ba3e89e0c2fe4ff"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDistanceMax</b> (double distance)</td></tr>
+<tr class="memitem:a55937c5216b3f92e7ba3e89e0c2fe4ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a55937c5216b3f92e7ba3e89e0c2fe4ff">setDistanceMax</a> (double <a class="el" href="class_graph.html#a5a816844b989c28c01b97015ab8868e4">distance</a>)</td></tr>
 <tr class="separator:a55937c5216b3f92e7ba3e89e0c2fe4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a490fad5c47b3b7585f4c4cd72e92db35"><td class="memItemLeft" align="right" valign="top"><a id="a490fad5c47b3b7585f4c4cd72e92db35" name="a490fad5c47b3b7585f4c4cd72e92db35"></a>
-vector&lt; pair&lt; string, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>distancePersonStop</b> (double lat, double log)</td></tr>
+<tr class="memitem:a490fad5c47b3b7585f4c4cd72e92db35"><td class="memItemLeft" align="right" valign="top">vector&lt; pair&lt; string, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a490fad5c47b3b7585f4c4cd72e92db35">distancePersonStop</a> (double lat, double log)</td></tr>
 <tr class="separator:a490fad5c47b3b7585f4c4cd72e92db35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a816844b989c28c01b97015ab8868e4"><td class="memItemLeft" align="right" valign="top"><a id="a5a816844b989c28c01b97015ab8868e4" name="a5a816844b989c28c01b97015ab8868e4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>distance</b> (int a, int b)</td></tr>
+<tr class="memitem:a5a816844b989c28c01b97015ab8868e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a5a816844b989c28c01b97015ab8868e4">distance</a> (int a, int b)</td></tr>
 <tr class="separator:a5a816844b989c28c01b97015ab8868e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af81ba60e2bcd39149fb256f4dbaaa735"><td class="memItemLeft" align="right" valign="top"><a id="af81ba60e2bcd39149fb256f4dbaaa735" name="af81ba60e2bcd39149fb256f4dbaaa735"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setStoplines</b> (int idStops)</td></tr>
-<tr class="separator:af81ba60e2bcd39149fb256f4dbaaa735"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e770a334d6d2dac09afc73865fb1abf"><td class="memItemLeft" align="right" valign="top"><a id="a8e770a334d6d2dac09afc73865fb1abf" name="a8e770a334d6d2dac09afc73865fb1abf"></a>
-const vector&lt; Edge &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getStoplines</b> ()</td></tr>
-<tr class="separator:a8e770a334d6d2dac09afc73865fb1abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4fa6baabb9cfb7caf82c8bd65701e08"><td class="memItemLeft" align="right" valign="top"><a id="ad4fa6baabb9cfb7caf82c8bd65701e08" name="ad4fa6baabb9cfb7caf82c8bd65701e08"></a>
-list&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>linesListShorterPath</b> (list&lt; int &gt; path)</td></tr>
+<tr class="memitem:ad4fa6baabb9cfb7caf82c8bd65701e08"><td class="memItemLeft" align="right" valign="top">list&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ad4fa6baabb9cfb7caf82c8bd65701e08">linesListShorterPath</a> (list&lt; int &gt; path)</td></tr>
 <tr class="separator:ad4fa6baabb9cfb7caf82c8bd65701e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28c3a2d1cfeced8cd9202e37c6a729fc"><td class="memItemLeft" align="right" valign="top"><a id="a28c3a2d1cfeced8cd9202e37c6a729fc" name="a28c3a2d1cfeced8cd9202e37c6a729fc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLineOnList</b> (int stop1, int stop2, list&lt; string &gt; &amp;lines)</td></tr>
+<tr class="memitem:a28c3a2d1cfeced8cd9202e37c6a729fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a28c3a2d1cfeced8cd9202e37c6a729fc">setLineOnList</a> (int stop1, int stop2, list&lt; string &gt; &amp;lines)</td></tr>
 <tr class="separator:a28c3a2d1cfeced8cd9202e37c6a729fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4790d222edbc2b4f6fbf1493cb728938"><td class="memItemLeft" align="right" valign="top"><a id="a4790d222edbc2b4f6fbf1493cb728938" name="a4790d222edbc2b4f6fbf1493cb728938"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createtrajeto</b> (queue&lt; int &gt; q)</td></tr>
-<tr class="separator:a4790d222edbc2b4f6fbf1493cb728938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19dc02ed7208fb59ba99ede4d6a40676"><td class="memItemLeft" align="right" valign="top"><a id="a19dc02ed7208fb59ba99ede4d6a40676" name="a19dc02ed7208fb59ba99ede4d6a40676"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>sortBySecond</b> (const pair&lt; Node, double &gt; &amp;a, const pair&lt; Node, double &gt; &amp;b)</td></tr>
-<tr class="separator:a19dc02ed7208fb59ba99ede4d6a40676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a18b4f6dec368300991b68dd75e39a5e9" name="a18b4f6dec368300991b68dd75e39a5e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b4f6dec368300991b68dd75e39a5e9">&#9670;&nbsp;</a></span>Graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Graph::Graph </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>dir</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Constructor of class graph </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodes</td><td>number of nodes of the graph </td></tr>
+    <tr><td class="paramname">dir</td><td>represents if graph have direction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a492f845b4a73e14fd031f94609a79f96" name="a492f845b4a73e14fd031f94609a79f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492f845b4a73e14fd031f94609a79f96">&#9670;&nbsp;</a></span>addEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::addEdge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>weight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Add an edge to the graph </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>source node </td></tr>
+    <tr><td class="paramname">dest</td><td>destination node </td></tr>
+    <tr><td class="paramname">weight</td><td>weight of the edge </td></tr>
+    <tr><td class="paramname">name</td><td>name of the line </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae1e45e27c60711dadec619ca17e830a4" name="ae1e45e27c60711dadec619ca17e830a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e45e27c60711dadec619ca17e830a4">&#9670;&nbsp;</a></span>bfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::bfs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >set the distance, by number of stops, between origin stop and all others </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>origin stop </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a38da972f1f090eff252739cd251b8201" name="a38da972f1f090eff252739cd251b8201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38da972f1f090eff252739cd251b8201">&#9670;&nbsp;</a></span>bfs_Path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt; int &gt; Graph::bfs_Path </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >show the path, by stops, between two stops, using bfs algorithm </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>origin node </td></tr>
+    <tr><td class="paramname">b</td><td>destination node </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list with the path, in stops </dd></dl>
+
+</div>
+</div>
+<a id="a7f995601c667d9c0586c288887a79a02" name="a7f995601c667d9c0586c288887a79a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f995601c667d9c0586c288887a79a02">&#9670;&nbsp;</a></span>dijkstra_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Graph::dijkstra_distance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >distance from one stop to another </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>origin stop </td></tr>
+    <tr><td class="paramname">b</td><td>destination stop </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>distance between stops </dd></dl>
+
+</div>
+</div>
+<a id="a68dee2186fca9890aecf5ee5c22cb6ab" name="a68dee2186fca9890aecf5ee5c22cb6ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68dee2186fca9890aecf5ee5c22cb6ab">&#9670;&nbsp;</a></span>dijkstra_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt; int &gt; Graph::dijkstra_path </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >return the path, by stops, between two stops using dijkstra algorithm </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>origin stop </td></tr>
+    <tr><td class="paramname">b</td><td>destination stop </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list with the path, in stops </dd></dl>
+
+</div>
+</div>
+<a id="a5a816844b989c28c01b97015ab8868e4" name="a5a816844b989c28c01b97015ab8868e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a816844b989c28c01b97015ab8868e4">&#9670;&nbsp;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graph::distance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >distance, by stops, between two stops </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>origin stop </td></tr>
+    <tr><td class="paramname">b</td><td>destination stop </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of stops between two stops </dd></dl>
+
+</div>
+</div>
+<a id="a490fad5c47b3b7585f4c4cd72e92db35" name="a490fad5c47b3b7585f4c4cd72e92db35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a490fad5c47b3b7585f4c4cd72e92db35">&#9670;&nbsp;</a></span>distancePersonStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; pair&lt; string, double &gt; &gt; Graph::distancePersonStop </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>log</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >generate a vector with the stops that the user can reach from his initial position, taking into account the distance he can walk </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lat</td><td>latitude of the coordinate </td></tr>
+    <tr><td class="paramname">log</td><td>longitude of the coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector with the stops </dd></dl>
+
+</div>
+</div>
+<a id="ad089f1e99336ee6f210d80c2b21c4814" name="ad089f1e99336ee6f210d80c2b21c4814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad089f1e99336ee6f210d80c2b21c4814">&#9670;&nbsp;</a></span>getEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::getEdge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idStops</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >show lines associated to a node </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idStops</td><td>number of the node </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaa5cf100f72c391e947613290509245d" name="aaa5cf100f72c391e947613290509245d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5cf100f72c391e947613290509245d">&#9670;&nbsp;</a></span>getPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::getPath </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >returns the path between a source node and a destination node </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>source node </td></tr>
+    <tr><td class="paramname">dest</td><td>destination node </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4fa6baabb9cfb7caf82c8bd65701e08" name="ad4fa6baabb9cfb7caf82c8bd65701e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4fa6baabb9cfb7caf82c8bd65701e08">&#9670;&nbsp;</a></span>linesListShorterPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt; string &gt; Graph::linesListShorterPath </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >list of the lines in the shorter path between two stops </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>list with the stops of the path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list with the lines </dd></dl>
+
+</div>
+</div>
+<a id="a55937c5216b3f92e7ba3e89e0c2fe4ff" name="a55937c5216b3f92e7ba3e89e0c2fe4ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55937c5216b3f92e7ba3e89e0c2fe4ff">&#9670;&nbsp;</a></span>setDistanceMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::setDistanceMax </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>distance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >set distance max that user can walk </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distance</td><td>distance in km </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad7f9bab6ddd91c0d0435c4c029bd967c" name="ad7f9bab6ddd91c0d0435c4c029bd967c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f9bab6ddd91c0d0435c4c029bd967c">&#9670;&nbsp;</a></span>setInfoLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::setInfoLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>lineName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >set information of the line </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>source node </td></tr>
+    <tr><td class="paramname">dest</td><td>destination node </td></tr>
+    <tr><td class="paramname">lineName</td><td>name of the line </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c722bbc1821db92c8cfa821dc7b7e48" name="a3c722bbc1821db92c8cfa821dc7b7e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c722bbc1821db92c8cfa821dc7b7e48">&#9670;&nbsp;</a></span>setInfoNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::setInfoNode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >set information of the node </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idNode</td><td>number of the node </td></tr>
+    <tr><td class="paramname">info</td><td>vector that contains the information </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28c3a2d1cfeced8cd9202e37c6a729fc" name="a28c3a2d1cfeced8cd9202e37c6a729fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c3a2d1cfeced8cd9202e37c6a729fc">&#9670;&nbsp;</a></span>setLineOnList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::setLineOnList </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stop1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stop2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >add a line between two stops in a list of lines </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stop1</td><td>origin stop </td></tr>
+    <tr><td class="paramname">stop2</td><td>destination stop </td></tr>
+    <tr><td class="paramname">lines</td><td>list with the lines </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae46408c39518b0a1e2f6e86f5e06727f" name="ae46408c39518b0a1e2f6e86f5e06727f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46408c39518b0a1e2f6e86f5e06727f">&#9670;&nbsp;</a></span>showNodeById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::showNodeById </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idStop</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >shows the stop code </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idStop</td><td>stop code </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a38c5e5207f1e4d0bf6977dca1b525819" name="a38c5e5207f1e4d0bf6977dca1b525819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c5e5207f1e4d0bf6977dca1b525819">&#9670;&nbsp;</a></span>stopNextStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::stopNextStop </td>
+          <td>(</td>
+          <td class="paramtype">map&lt; string, int &gt;&#160;</td>
+          <td class="paramname"><em>mapStops</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >locate stops that are close and create a new edge between them </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mapStops</td><td>map of stops and corresponding node number </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="graph_8h_source.html">graph.h</a></li>
-<li>graph.cpp</li>
+<li>C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/<a class="el" href="graph_8h_source.html">graph.h</a></li>
+<li>C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/graph.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

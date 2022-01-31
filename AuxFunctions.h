@@ -13,7 +13,7 @@ using namespace std;
  * @param lon1 longitude of first point
  * @param lat2 latitude of second point
  * @param lon2 longitude of second point
- * @return
+ * @return distance between two points
  */
 static double haversineFormula(double lat1, double lon1,
                         double lat2, double lon2)
@@ -37,11 +37,5 @@ static double haversineFormula(double lat1, double lon1,
     double c = 2 * asin(sqrt(a));
     return rad * c;
 }
-
-
-
-
-
-
 
 #endif //AED_PROJECT_AUXF// UNCTIONS_H

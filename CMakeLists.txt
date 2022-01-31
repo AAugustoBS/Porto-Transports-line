@@ -3,7 +3,7 @@ project(AED_PROJECT)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(AED_PROJECT main.cpp cmake-build-debug/ReadFiles.cpp cmake-build-debug/ReadFiles.h graph.cpp graph.h ReadFiles.h AuxFunctions.h MinHeap.h Application.cpp Application.h Application1.cpp Application1.h)
+add_executable(AED_PROJECT main.cpp graph.cpp graph.h ReadFiles.h AuxFunctions.h MinHeap.h Application1.cpp Application1.h)
 
 # Doxygen Build
 find_package(Doxygen)

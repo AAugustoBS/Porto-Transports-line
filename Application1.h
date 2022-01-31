@@ -76,22 +76,17 @@ public:
      */
     vector<pair <string ,double>> possivelStops(double latitude,double longitude);
     /**
-     *
-     * @return
-     */
-    pair<string,double> bestRouteByFewerStops();
-    /**
-     *
-     * @param bestroute
-     * @param lines
-     * @param path
+     * show the path
+     * @param bestroute best path for the indicated situation
+     * @param lines list with lines
+     * @param path list with stops that belog to the best path
      */
     void printResultwithLine(pair<pair<string,string>,double> bestroute,list<string> lines,list<int> path);
     /**
-     *
-     * @param origem
-     * @param destino
-     * @param nStops
+     * set the best bath
+     * @param origem origin stop
+     * @param destino destination stop
+     * @param nStops number of stops
      */
     void setBestRoute(string origem,string destino,double nStops);
     /**

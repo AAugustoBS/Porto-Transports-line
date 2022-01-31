@@ -4,15 +4,22 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/Application1.cpp" "C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/Application1.cpp.obj"
+  "C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/graph.cpp" "C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/graph.cpp.obj"
+  "C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/main.cpp" "C:/Users/hreis/OneDrive/Documentos/GitHub/AED-PROJECT/cmake-build-debug/CMakeFiles/AED_PROJECT.dir/main.cpp.obj"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/Application.cpp" "CMakeFiles/AED_PROJECT.dir/Application.cpp.o" "gcc" "CMakeFiles/AED_PROJECT.dir/Application.cpp.o.d"
-  "/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/Application1.cpp" "CMakeFiles/AED_PROJECT.dir/Application1.cpp.o" "gcc" "CMakeFiles/AED_PROJECT.dir/Application1.cpp.o.d"
-  "/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/cmake-build-debug/ReadFiles.cpp" "CMakeFiles/AED_PROJECT.dir/ReadFiles.cpp.o" "gcc" "CMakeFiles/AED_PROJECT.dir/ReadFiles.cpp.o.d"
-  "/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/graph.cpp" "CMakeFiles/AED_PROJECT.dir/graph.cpp.o" "gcc" "CMakeFiles/AED_PROJECT.dir/graph.cpp.o.d"
-  "/Users/luispaiva/Desktop/Trabalho ldts/AED-PROJECT/main.cpp" "CMakeFiles/AED_PROJECT.dir/main.cpp.o" "gcc" "CMakeFiles/AED_PROJECT.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -64,9 +64,6 @@ void Application1::originPositionMenu(){
 }
 
 void Application1::setOriginCoordenates(){
-    //originLatitude = 41.180548;  //UHUB COORDENATES
-    //originLongitude = -8.594938;
-
     cout<<"Latitude: ";
     cin>>this->originLatitude;
     cout<<endl;
@@ -76,8 +73,6 @@ void Application1::setOriginCoordenates(){
 }
 
 void Application1::setOriginStop(){
-    //originStop="ASP3";
-
     cout<<"Origin Stop: ";
     cin>>this->originStop;
     for (auto & c: originStop) c = toupper(c);
@@ -129,10 +124,6 @@ void Application1::destPositionMenu(){
 }
 
 void Application1::setDestCoordenates() {
-    //destLatitude = 41.172245;  //Açoreano COORDENATES
-    //destLongitude = -8.597604;
-    //destLatitude = 41.149875;  //Mercado Bolhao
-    //destLongitude = -8.606005;
     cout<<"Latitude: ";
     cin>>this->destLatitude;
     cout<<endl;
@@ -142,8 +133,6 @@ void Application1::setDestCoordenates() {
 }
 
 void Application1::setDestStop(){
-    //destStop="MLAR2";
-
     cout<<"Destination Stop: ";
     cin>>this->destStop;
     for (auto & c: destStop) c = toupper(c);
@@ -157,7 +146,6 @@ void Application1::printTypeOfTrip() {
     cout<<"1. Fewer stops\n";
     cout<<"2. Shorter Distance\n";
     cout<<"0. Exit\n";
-    //typeOfTrip();
 }
 
 void Application1::typeOfTrip(){
@@ -181,16 +169,10 @@ void Application1::typeOfTrip(){
         case 1:
             cin.ignore();
             fewerStops();
-            //cin.ignore();
             break;
         case 2:
             cin.ignore();
             shorterDistance();
-            break;
-
-        case 3:
-            cin.ignore();
-            //lessBusChanges();
             break;
         default:
             cout << "Invalid option, enter again!\n\n";

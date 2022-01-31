@@ -61,10 +61,6 @@ void readLine(string fileName,string lineName,Graph &busline,map<string,int> map
     fstream file(fileName);
     string line;
 
-    if(!file.is_open()){
-        //cout<<"failed";
-        return;
-    }
     getline(file,line);
     getline(file,line);
     int firsIdStop = mapStops.find(line)->second;
@@ -88,7 +84,6 @@ void readEdge(Graph &busline,map<string,int> mapStops){
     while(getline(file,line,',')){
         string fileToOpen = "dataset/line_" + line +"_0.csv";
         string fileToOpen2 = "dataset/line_" + line +"_1.csv";
-        //cout<<fileToOpen<<endl;
         getline(file,line);
         readLine(fileToOpen,line,busline,mapStops);
 

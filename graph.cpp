@@ -24,7 +24,6 @@ void Graph::setInfoNode(int idNode,vector<string>info) {
         nodes[idNode].log = stod(info[4]);
 }
 
-
 void Graph::setInfoLine(int src, int dest, string lineName) {
     float distance = haversineFormula(nodes[src].lat,nodes[src].log,nodes[dest].lat,nodes[dest].log);
     addEdge(src,dest,distance,lineName);
@@ -66,7 +65,6 @@ void Graph::getPath(int src,int dest) {
     list<int>::iterator it = pa.begin();
     while(it !=pa.end()){
         cout << nodes[*it].codeName << endl;
-       // cout<<nodes[*it].codeName<<endl;
         advance(it,1);
     }
 }
@@ -161,7 +159,6 @@ void Graph::setDistanceMax(double distance) {
 }
 
 void Graph::showNodeById(int idStop){
-   // cout<<idStop<<endl;
     cout<<nodes[idStop].codeName;
 
 }

@@ -43,7 +43,6 @@ class Graph {
         string codeName;
         string address;
         string zone;
-        //  Coordinates c1;
         /**
          * coordinates of the stop
          */
@@ -67,8 +66,6 @@ class Graph {
      */
     double distMax = 0.3;
     void dijkstra(int s);
-    vector <Edge> stoplines={} ;
-    vector <int> trajeto={};
 
 public:
     /**
